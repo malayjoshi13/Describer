@@ -1,0 +1,8 @@
+pillow
+pickleshare
+numpy==1.19.3
+tensorflow-cpu
+Flask
+urllib3
+gunicorn
+wheel==0.35
