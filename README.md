@@ -73,7 +73,7 @@ python app.py
 
 ### 3.2) Training 
 
-Note:- line wise code explaination, thus you are requested to keep refering and side-by-side executing steps in ```training.ipynb``` file located at https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing for better understanding
+Note:- line wise code explaination, thus you are requested to keep refering and side-by-side executing steps in ```training.ipynb``` file located at https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing (just click on link and then open it using Google Colaboratory) for better understanding.
 <br>
 
 **3.2.1) Setting up working environment in "Describe" named folder at Google Drive**
