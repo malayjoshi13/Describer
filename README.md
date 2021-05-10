@@ -69,7 +69,9 @@ python app.py
 ![96965333-97d39380-1529-11eb-8f0e-1ac51c337c4d](https://user-images.githubusercontent.com/71775151/114160441-8e59ae80-9944-11eb-8568-876859131246.png)
 
 ![96964503-30691400-1528-11eb-9b5a-821e9984aa33](https://user-images.githubusercontent.com/71775151/114160445-8f8adb80-9944-11eb-823e-68a71ecaa72a.png)
-
+<br>
+<br>
+<br>
 
 ### 2.2) Training 
 
