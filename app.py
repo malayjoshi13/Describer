@@ -20,6 +20,9 @@ app = Flask(__name__)
 max_length = 34
 vocab_size = 1798
 
+directory = os.getcwd()
+
+
 filename = 'word_to_index.pkl'
 word_to_index = load(open(filename, 'rb'))
 
