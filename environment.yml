@@ -1,12 +1,13 @@
 name: Describe
 channels:
-  - conda-forge
   - defaults
 dependencies:
-  - flask=1.1.2=pyh9f0ad1d_0
-  - pillow=8.1.2=py39h1a9d4f7_1
-  - pip=21.1.1=pyhd8ed1ab_0
+  - flask=1.1.2=pyhd3eb1b0_0
+  - pillow=8.2.0=py39h4fa10fc_0
+  - pip=21.0.1=py39haa95532_0
+  - urllib3=1.26.4=pyhd3eb1b0_0
+  - wheel=0.36.2=pyhd3eb1b0_0
   - pip:
     - numpy==1.19.5
     - tensorflow-cpu==2.5.0rc3
-    - urllib3==1.26.4
+prefix: C:\Users\lenovo\miniconda3\envs\Describe
