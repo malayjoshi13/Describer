@@ -32,7 +32,7 @@ It comprises of three main components:
 
 **2.1.2)** Open Git Bash and type following code in it to clone this GitHub repository at any location of your wish.
 
-Note: Copy address of location where you want to clone this repository and paste it in format- cd <path of location>
+Note: Copy address of location where you want to clone this repository and paste it in format- cd path_of_location
 ```
 cd /c/Users/thispc/Desktop
 ```
@@ -43,7 +43,7 @@ git clone https://github.com/malayjoshi13/Describe.git
  
 **2.1.3)** Now type following code in your command prompt (CMD) to change you current working directory/location to location of "Describe" folder (present inside the cloned repository)
 
-Note: Copy address of "Describe" folder (present inside the cloned repository) and paste it in format- cd <path of location>
+Note: Copy address of "Describe" folder (present inside the cloned repository) and paste it in format- cd path_of_location
 ```
 cd C:\Users\thispc\Desktop\Describe
 ```
