@@ -45,15 +45,11 @@ cd C:\Users\thispc\Desktop\Describe
 ```
 then,
 ```
-conda create --name describe
+conda env create -f environment.yml
 ```
-then,
+above command creates virtual environment named "Describe" (as present at top of "environment.yml") and also install packages mentioned in the yml file, then execute,
 ```
-conda activate describe
-```
-then,
-```
-pip install -r requirements.txt
+conda activate Describe
 ```
 then,
 ```
