@@ -30,7 +30,9 @@ It comprises of three main components:
 
 **2.1.1)** Install Miniconda in your system from link:- https://docs.conda.io/en/latest/miniconda.html. Also install Git Bash from link:- https://git-scm.com/downloads.
 
-**2.1.2)** Open Git Bash and type following code in it to clone this GitHub repository at any location of your wish. In my case I took ```C:\Users\thispc\Desktop```, you can change it with location path of your own:-
+**2.1.2)** Open Git Bash and type following code in it to clone this GitHub repository at any location of your wish.
+
+Note: Copy address of location where you want to clone this repository and paste it in format- cd <path of location>
 ```
 cd /c/Users/thispc/Desktop
 ```
@@ -39,7 +41,9 @@ then,
 git clone https://github.com/malayjoshi13/Describe.git
 ```
  
-**2.1.3)** Now type following code in your command prompt (CMD):- 
+**2.1.3)** Now type following code in your command prompt (CMD) to change you current working directory/location to location of "Describe" folder (present inside the cloned repository)
+
+Note: Copy address of "Describe" folder (present inside the cloned repository) and paste it in format- cd <path of location>
 ```
 cd C:\Users\thispc\Desktop\Describe
 ```
