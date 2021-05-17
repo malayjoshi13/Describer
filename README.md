@@ -14,13 +14,15 @@ Describe uses both Natural Language Processing and Computer Vision to generate t
 
 It comprises of three main components:
 
-**1.1) Convolutional Neural Network (CNN) acting as Encoder:** A pre-trained CNN known as ```InceptionV3``` is used as an encoder to encode an input image to its features. These encoded features of dimention (4096,) are obtained from the second last layer by removing the last softmax layer of InceptionV3.<br>
+**1.1) Convolutional Neural Network (CNN) acting as Encoder:** A pre-trained CNN known as ```InceptionV3``` is used as an encoder to encode an input image to its features vector known as image feature vector. These image features vectors of dimention (4096,) are obtained from the second last layer by removing the last softmax layer of InceptionV3.<br>
 
 ![Schematic-diagram-of-InceptionV3-model-compressed-view](https://user-images.githubusercontent.com/71775151/114168447-e47f1f80-994d-11eb-830b-aa212eadebc2.jpg)
 
-**1.2) Word embedding model:** Since the number of unique words can be large, a one hot encoding of the words is not a good idea. Thus, a pre-trained embedding model ```GloVe``` is used that takes a word and outputs an embedding vector of dimension (1, 128).
+**1.2) Word embedding model:** Since the number of unique words can be large, a one hot encoding of the words is not a good idea. Thus, a pre-trained embedding model ```GloVe``` is used that takes every word of every training caption and outputs an word embedding vector of dimension (1, 128). 
 
-**1.3) Recurrent Neural Network acting as Decoder:** One of the types of RNN known as ```LSTM network``` (Long short-term memory) has been employed as decoder for the task of generating captions. It takes the image vector and partial captions at the current timestep as input and decodes them to generate the next most probable word as output.<br>
+These outputs of ```image feature vectors``` and ```word embedding vectors``` go further into a function called as ```data_generator``` (will discuss in later sections) which converts both of them into a format suitable for training.
+
+**1.3) Recurrent Neural Network acting as Decoder:** One of the types of RNN known as ```LSTM network``` (Long short-term memory) has been employed as decoder for the task of generating captions. It takes the image features vector and word embeddings of partial captions from ```data_generator``` function at the current timestep as input and decodes them to generate the next most probable word as output.<br>
 
 ![0127](https://user-images.githubusercontent.com/71775151/114167969-42f7ce00-994d-11eb-962e-638cbe27bd28.jpg)
 
