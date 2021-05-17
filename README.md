@@ -1,5 +1,5 @@
 # Describe
-Describe is a machine learning based image captioning system which by help of a pre-trained ***convolutional neural network model*** of ***"InceptionV3" model*** (fine tuned on data from Flickr8k link:-https://forms.illinois.edu/sec/1713398 provided by the University of Illinois at Urbana-Champaign) and a ***recurrent neural network*** of ***long short memory model***  generates text based captions corresponding to images feeded to it. 
+Describe is a machine learning based image captioning system which by help of a pre-trained ***convolutional neural network model (CNN)*** of ***"InceptionV3" model*** (fine tuned on data from Flickr8k link:-https://forms.illinois.edu/sec/1713398 provided by the University of Illinois at Urbana-Champaign) and a ***recurrent neural network (RNN)*** of ***long short term memory model (LSTM)***  generates text based captions corresponding to images feeded to it. 
 
 Users can further extend accuracy of this model by re-training it on new annotated dataset starting from the weights of existing model.
 
