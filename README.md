@@ -6,7 +6,7 @@ Users can further extend accuracy of this model by re-training it on new annotat
 This system paves the path towards development of "automated guiding system" which will guide people with visual disability to cross busy roads and to perform their other day to day based tasks. It will do so by taking video inputs of user's surroundings from camera fitted in their headwear and then converting these inputs into audio based captions/descriptions.
 <br><br>
 
-## 1) How does Decribe work?
+## 1) What makes Decribe work?
 
 Describe uses both Natural Language Processing and Computer Vision to generate the captions/textual description of an image. 
 
