@@ -32,7 +32,18 @@ These outputs of ```image feature vectors``` and ```word embedding vectors``` go
 
 ### 2.1) Prediction using Web-application
 
-**2.1.1)** Install Miniconda in your system from link:- https://docs.conda.io/en/latest/miniconda.html. Also install Git Bash from link:- https://git-scm.com/downloads.
+### 2.1) Prediction
+**2.1.1)** Install Miniconda in your system from link:- https://docs.conda.io/en/latest/miniconda.html. (Tip: Keep agreeing and allowing blindly to what all prompts and buttons come in the process of installing miniconda with an exception case where you have to also tick the option to add miniconda to environment variable, i.e.:
+
+Before
+
+![Inked11aGz_LI (1)](https://user-images.githubusercontent.com/71775151/118517428-d1cde680-b754-11eb-88ec-edb6388063c3.jpg)
+
+After
+
+![install_python_path](https://user-images.githubusercontent.com/71775151/118516836-4f452700-b754-11eb-998e-6d96f56b9aed.png)
+
+Also install Git Bash from link:- https://git-scm.com/downloads.
 
 **2.1.2)** Open Git Bash and type following code in it to clone this GitHub repository at any location of your wish.
 
@@ -45,9 +56,9 @@ then,
 git clone https://github.com/malayjoshi13/Describe.git
 ```
  
-**2.1.3)** Now type following code in your command prompt (CMD) to change you current working directory/location to location of "Describe" folder (present inside the cloned repository)
+**2.1.3)** Now type following code in your command prompt (CMD) to change you current working directory/location to location of "Describe" folder (name of the cloned repository on your local system)
 
-**Note:** Copy address of "Describe" folder (present inside the cloned repository) and paste it in format- "cd path_of_location"
+**Note:** Copy address of "Describe" folder and paste it in format- "cd path_of_location"
 ```
 cd C:\Users\thispc\Desktop\Describe
 ```
