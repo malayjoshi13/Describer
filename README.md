@@ -64,7 +64,7 @@ then,
 python app.py
 ```
 as you execute above code you will some write-up of this kind on your command prompt
-![Inkedimage-72-1024x576_LI](https://user-images.githubusercontent.com/71775151/118513514-68000d80-b751-11eb-9506-87e3d77b7c50.jpg)
+![Inkedimage-72-1024x576_LI](https://user-images.githubusercontent.com/71775151/118514812-66831500-b752-11eb-975a-db1aa5860e03.jpg)
 
 just copy the address looking like the red marked one, and paste it on your web browser. On doing this you will be directed to your web application running on local server. There upload image of your choice and get the corresponding description/caption displayed.
 
