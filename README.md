@@ -31,8 +31,6 @@ These outputs of ```image feature vectors``` and ```word embedding vectors``` go
 ## 2) Usage
 
 ### 2.1) Prediction using Web-application
-
-### 2.1) Prediction
 **2.1.1)** Install Miniconda in your system from link:- https://docs.conda.io/en/latest/miniconda.html. (Tip: Keep agreeing and allowing blindly to what all prompts and buttons come in the process of installing miniconda with an exception case where you have to also tick the option to add miniconda to environment variable, i.e.:
 
 Before
