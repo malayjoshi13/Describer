@@ -101,7 +101,7 @@ Go to the link https://forms.illinois.edu/sec/1713398 and fill the form present 
 
 ![bandicam 2021-05-07 00-30-55-840](https://user-images.githubusercontent.com/71775151/117351590-881b0b80-aecb-11eb-8e53-d0cdcfc3a7a9.jpg)
 
-Now as whole training process will happen by help of Google Drive and Google Colab thus upload the downloaded Flickr8k zipped data as well as ```training.py``` file (present in this GitHub repository, so just download it from here!) to your Google Drive in a new folder named ```Describe```. 
+Now as whole training process will happen by help of Google Drive and Google Colab, thus upload the unzipped ```Flickr8k data``` (which you just downloaded) as well as the ```training.ipynb``` file (download this file https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing and place it in Google Drive) to your Google Drive in a new folder named ```Describe```. 
 
 After uploading both folders, unzip them both (i.e ```Flickr 8k Images``` and ```Flickr 8k Text Data``` folders). After this, take out ```Flickr_8k.devImages.txt```, ```Flickr_8k.testImages.txt```, ```Flickr_8k.trainImages.txt``` and ```Flickr8k.token.txt``` files out of unzipped ```Flickr 8k Text Data``` folder and after taking out these files, delete ```Flickr 8k Text Data``` folder. Then last step will be to rename ```Flickr_8k.devImages.txt``` → ```DevImages.txt```, ```Flickr_8k.testImages.txt``` → ```TestImages.txt```, ```Flickr_8k.trainImages.txt``` → ```TrainImages.txt``` and ```Flickr8k.token.txt``` → ```captions.txt```. At end your ```Describe``` folder must be looking something like this:
 
