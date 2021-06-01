@@ -1,6 +1,8 @@
 # Describe
 Describe is a machine learning based image captioning system which by help of a pre-trained ***convolutional neural network model (CNN)*** of ***"InceptionV3" model*** (fine tuned on data from Flickr8k link:-https://forms.illinois.edu/sec/1713398 provided by the University of Illinois at Urbana-Champaign) and a ***recurrent neural network (RNN)*** of ***long short term memory model (LSTM)***  generates text based captions corresponding to images feeded to it. 
 
+https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-832c-b21f190bfe6f.mp4
+
 Users can further extend accuracy of this model by re-training it on new annotated dataset starting from the weights of existing model.
 
 This system paves the path towards development of "automated guiding system" which will guide people with visual disability to cross busy roads and to perform their other day to day based tasks. It will do so by taking video inputs of user's surroundings from camera fitted in their headwear and then converting these inputs into audio based captions/descriptions.
