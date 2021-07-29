@@ -22,7 +22,6 @@ vocab_size = 1798
 
 directory = os.getcwd()
 
-
 filename = 'word_to_index.pkl'
 word_to_index = load(open(filename, 'rb'))
 
@@ -35,7 +34,8 @@ embedding_matrix = load(open(filename2, 'rb'))
 # here we are loading our model which is saved under the name ‘model.h5’
 trained_model = load_model('modelzz.h5')
 
-# as we already saw that we made use of Inception V3 model to vectorize our images, so for new images also we need to vectorize them using the same, so the config should match with our trained ML model.
+# as we already saw that we made use of Inception V3 model to vectorize our images, 
+# so for new images also we need to vectorize them using the same, so the config should match with our trained ML model.
 pre_trained_model = InceptionV3(weights='imagenet')
 encoder = Model(pre_trained_model.input, pre_trained_model.layers[-2].output) 
 
@@ -47,13 +47,12 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
- if request.method == 'POST':
-    url = request.files['userfile']
-    
+ if request.method == 'POST':    
     image_list = os.listdir("static/")
     for i in image_list:
         os.remove("static/"+i)
     
+    url = request.files['userfile']
     imageName = "static/{}".format(url.filename)
     url.save(imageName)
     
@@ -77,22 +76,10 @@ def predict():
     final = caption.split()
     final = final[1:-1]
     final_caption = ' '.join(final)
-    predict = re.sub(r'\b(\w+)( \1\b)+', r'\1', final_caption)
-    print(imageName)
-    print(predict)
-   
-    del img
-    del imageName
-    del test_img_encoding
-    del final_caption
-    del caption
-    del sequence
-    del inputs
-    gc.collect()
-    
+    predict = re.sub(r'\b(\w+)( \1\b)+', r'\1', final_caption)    
     return render_template('result.html', prediction = predict, urlImg = url)
    
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
