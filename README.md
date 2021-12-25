@@ -1,30 +1,26 @@
 # Describe
-Describe is a machine learning based image captioning system which by help of a pre-trained ***convolutional neural network model (CNN)*** of ***"InceptionV3" model*** (fine tuned on data from Flickr8k link:-https://forms.illinois.edu/sec/1713398 provided by the University of Illinois at Urbana-Champaign) and a ***recurrent neural network (RNN)*** of ***long short term memory model (LSTM)***  generates text based captions corresponding to images feeded to it. 
+Describe is a machine learning based image captioning system which by help of ***InceptionV3 model*** (a type of convolutional neural network) and ***long short term memory model (LSTM)*** (a type of recurrent neural network) fine tuned on ***Flickr8k data***, generates textual captions describing about images feed to it. 
 
 https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-832c-b21f190bfe6f.mp4
 
-Users can further extend accuracy of this model by re-training it on new annotated dataset starting from the weights of existing model.
-
-This system paves the path towards development of "automated guiding system" which will guide people with visual disability to cross busy roads and to perform their other day to day based tasks. It will do so by taking video inputs of user's surroundings from camera fitted in their headwear and then converting these inputs into audio based captions/descriptions.
+This project can be scaled-up for building "automated guiding system" to specifically help people with visual disability in crossing busy roads and performing other day to day based tasks. It will do so by taking video inputs of user's surroundings from headwear camera and then converting these inputs into audio based captions.
 <br><br>
 
 ## 1) What makes Decribe work?
 
-Describe uses both Natural Language Processing and Computer Vision to generate the captions/textual description of an image. 
+Describe uses both Natural Language Processing and Computer Vision to generate the captions that gives description of an input image. 
 
 ![explain_2](https://user-images.githubusercontent.com/71775151/114168565-0f697380-994e-11eb-98d3-7db106d58718.jpg)
 
 It comprises of three main components:
 
-**1.1) Convolutional Neural Network (CNN) acting as Encoder:** A pre-trained CNN known as ```InceptionV3``` is used as an encoder to encode an input image to its features vector known as image feature vector. These image features vectors of dimention (4096,) are obtained from the second last layer by removing the last softmax layer of InceptionV3.<br>
+**1.1) Convolutional Neural Network (CNN) acting as Encoder:** A pre-trained CNN known as ```InceptionV3``` is used as an encoder to obtain feature vector of every image from its (i.e. InceptionV3) second last layer (beacuse last layer of every CNN is a softmax layer which gives prediction probability).<br>
 
 ![Schematic-diagram-of-InceptionV3-model-compressed-view](https://user-images.githubusercontent.com/71775151/114168447-e47f1f80-994d-11eb-830b-aa212eadebc2.jpg)
 
-**1.2) Word embedding model:** Since the number of unique words can be large, a one hot encoding of the words is not a good idea. Thus, a pre-trained embedding model ```GloVe``` is used that takes every word of every training caption and outputs an word embedding vector of dimension (1, 128). 
+**1.2) Word embedding model:** Since the number of unique words can be very large, thus doing one hot encoding of the words is not a good idea. Therefore, a pre-trained embedding model called ```GloVe``` is used that takes every word of every training caption and outputs the corresponding word embedding vector. 
 
-These outputs of ```image feature vectors``` and ```word embedding vectors``` go further into a function called as ```data_generator``` (will discuss in later sections) which converts both of them into a format suitable for training.
-
-**1.3) Recurrent Neural Network acting as Decoder:** One of the types of RNN known as ```LSTM network``` (Long short-term memory) has been employed as decoder for the task of generating captions. It takes the image features vector and word embeddings of partial captions from ```data_generator``` function at the current timestep as input and decodes them to generate the next most probable word as output.<br>
+**1.3) Recurrent Neural Network acting as Decoder:** A type of RNN known as ```LSTM network``` (Long short-term memory) generates caption of every given image. It do so by taking input of feature vector of the given image and word embedding vector of the starting part of that image's caption and then keep on generating the next most probable words for this input partial caption (by considering the feature vector of image it is related to and the word embeddings of previous words).<br>
 
 ![0127](https://user-images.githubusercontent.com/71775151/114167969-42f7ce00-994d-11eb-962e-638cbe27bd28.jpg)
 
