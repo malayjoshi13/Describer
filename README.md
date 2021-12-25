@@ -51,7 +51,7 @@ Link for training file:- https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7
 
 **Understanding some code parts of training file**
 
-** a) Scripting function called "data_generator"**
+**a) Scripting function called "data_generator"**
 
 The need of this function will be to make training data (i.e. image encodings+captions) in format suitable for training. This function will also create multiple batches of size 36 each so that at a single time during training phase there will be no need to upload whole training data.
 
