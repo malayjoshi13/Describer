@@ -49,8 +49,9 @@ Link for prediction file:- https://colab.research.google.com/drive/1HIpLysJeD401
 Link for training file:- https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
 
 
+**Understanding some code parts of training file**
 
-**e) Scripting function called "data_generator"**
+** a) Scripting function called "data_generator"**
 
 The need of this function will be to make training data (i.e. image encodings+captions) in format suitable for training. This function will also create multiple batches of size 36 each so that at a single time during training phase there will be no need to upload whole training data.
 
@@ -73,7 +74,7 @@ And once this function will collect dataset corresponding to 36 training image-e
 <br>
 <br>
 
-**f) Creating structure of training model and setting arguments of "compile" method** 
+** b) Creating structure of training model and setting arguments of "compile" method** 
 
 ![bandicam 2021-05-09 01-55-49-417](https://user-images.githubusercontent.com/71775151/117552662-6c9a3700-b06a-11eb-9add-e0e0ec47fbca.jpg)
 
