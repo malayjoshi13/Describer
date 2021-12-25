@@ -74,7 +74,7 @@ And once this function will collect dataset corresponding to 36 training image-e
 <br>
 <br>
 
-** b) Creating structure of training model and setting arguments of "compile" method** 
+**b) Creating structure of training model and setting arguments of "compile" method** 
 
 ![bandicam 2021-05-09 01-55-49-417](https://user-images.githubusercontent.com/71775151/117552662-6c9a3700-b06a-11eb-9add-e0e0ec47fbca.jpg)
 
