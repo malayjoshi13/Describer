@@ -1,5 +1,5 @@
 # Describe
-Describe is a machine learning based image captioning system which by help of ***InceptionV3 model*** (a type of convolutional neural network) and ***long short term memory model (LSTM)*** (a type of recurrent neural network) fine tuned on ***Flickr8k data***, generates textual captions describing about images feed to it. 
+Describe is a machine learning based **image captioning system** which by help of ***InceptionV3 model*** (a type of convolutional neural network) and ***long short term memory model (LSTM)*** (a type of recurrent neural network) fine tuned on ***Flickr8k data***, generates textual captions describing about images feed to it. 
 
 Got following BLEU scores (Bilingual Evaluation Understudy Score) during model evaluation:
 BLEU-1: 0.475314,
