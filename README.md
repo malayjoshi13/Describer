@@ -1,5 +1,5 @@
 # Describe
-Describe is a machine learning based **image captioning system** which by help of ***InceptionV3 model*** (a type of convolutional neural network) and ***long short term memory model (LSTM)*** (a type of recurrent neural network) fine tuned on ***Flickr8k data*** (Training Set — 6000 images, Dev Set — 1000 images, Test Set — 1000 images), generates textual captions describing about images feed to it. 
+Describe is a machine learning based **image captioning system** which by help of ***InceptionV3 model*** (a type of convolutional neural network) and ***long short term memory model (LSTM)*** (a type of recurrent neural network) fine tuned on ***Flickr8k data*** (Training Set — 6000 images, Dev Set — 1000 images, Test Set — 1000 images; each image with 5 captions), generates textual captions describing about images feed to it. 
 
 Got following BLEU scores (Bilingual Evaluation Understudy Score) during model evaluation:
 BLEU-1: 0.475314,
@@ -98,7 +98,7 @@ iv) After this the outputs from "layerC" and "layer2" (which are memorization of
 v) Once the structure for our model to be trained called as "training_model" is been constructed, the next job set the arguments of "compile" method which will configure the model for training time and based upon their actions the weights of training model will be updated during backpropagation process. Now let us understand what happens in backpropagation process. So during this process the output predicted by model (which is actually the word next to the incomplete/partial input training caption) is compared with the word which is goaled/aimed to be present next to the incomplete training caption. And the mission during whole backpropagation is to just minimise this gap between what was aimed and what is actually predicted by model.
 
 ## 3) Things learnt
-a) different layers and activation fns of CNN, b) RNN, LSTM, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model, f) attention with captioning, g) BLEU score
+a) different layers and activation fns of CNN, b) RNN, LSTM, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model, f) attention with captioning - https://medium.com/swlh/image-captioning-using-attention-mechanism-f3d7fc96eb0e, g) BLEU score, h) marge model (we used) vs inject model
 
 ## 4) Read
 a) https://towardsdatascience.com/a-guide-to-image-captioning-e9fd5517f350, b) https://arxiv.org/abs/1612.01887, c) https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/, d) https://arxiv.org/abs/1411.4555, e) https://arxiv.org/abs/1502.03044, f) https://arxiv.org/abs/1703.09137, g) https://arxiv.org/abs/1708.02043, h) https://arxiv.org/abs/1601.03896
