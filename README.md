@@ -63,12 +63,19 @@ The need of this function will be to make training data (i.e. image encodings+ca
 So, this function at a particular time will take 36 training captions and corresponding 36 image-encodings in a single batch like:
 
 1st data --> Encoding_of_pic1 & startseq Ram is boy endseq
+
 2nd data --> Encoding_of_pic2 & startseq dog is barking endseq
+
 .
+
 .
+
 18th data --> Encoding_of_pic18 & startseq it is book endseq
+
 .
+
 .
+
 36th data --> Encoding_of_pic36 & startseq snow is falling endseq
 
 After that it will split each of 36 captions in following format:
