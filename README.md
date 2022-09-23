@@ -16,7 +16,7 @@ This project can be scaled-up for building "automated guiding system" to specifi
 
 Describe uses both Natural Language Processing and Computer Vision to generate the captions that gives description of an input image. 
 
-![explain_2](https://user-images.githubusercontent.com/71775151/114168565-0f697380-994e-11eb-98d3-7db106d58718.jpg)
+![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
 
 It comprises of three main components:
 
@@ -99,3 +99,9 @@ iii) Now in parallel to this process of building structure for textul data, anot
 iv) After this the outputs from "layerC" and "layer2" (which are memorization of LSTM and modified dimensioned image-encodings respectively) merge together via "add" layer of "Keras.merge" and save them into "merging_point". Then "relu" activation is applied over output given out by "merging_point" so as to make the output graph non-linear to be fit well around the training data. This non-linear graph is then saved in "activator". Then at last with help of "softmax" layer our model predicts one word out of all words posssible to be the next word of the input partial/incomplete caption feeded to the model for training purpose and save it in "outputs". The number of possibilities of predicting such word = total words in "most_occuring_words" list = "vocab_size" = 1798.
 
 v) Once the structure for our model to be trained called as "training_model" is been constructed, the next job set the arguments of "compile" method which will configure the model for training time and based upon their actions the weights of training model will be updated during backpropagation process. Now let us understand what happens in backpropagation process. So during this process the output predicted by model (which is actually the word next to the incomplete/partial input training caption) is compared with the word which is goaled/aimed to be present next to the incomplete training caption. And the mission during whole backpropagation is to just minimise this gap between what was aimed and what is actually predicted by model.
+
+## 3) Things learnt
+a) different layers and activation fns of CNN, b) RNN, LSTM, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model
+
+## 4) Read
+a) https://towardsdatascience.com/a-guide-to-image-captioning-e9fd5517f350, b) 
