@@ -13,11 +13,11 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
 
 ## 1) How to use Describe?
 
-### For prediction:- 
-https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
-
-### For training:
+### 1.1) For training:
 https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
+
+### 1.2) For prediction:- 
+https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
 
 ## 2) How is Decribe working?
 
