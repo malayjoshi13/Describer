@@ -28,6 +28,8 @@ https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sh
 #### Step 1) Encoding all the images using InceptionV3
 All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)) whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
 
+For this task of extracting the features out of images, I tried out VGG-16, Resnet-50 and InceptionV3. Human top-5 error on Imagenet is 5.1%. VGG16 has almost 134 million parameters thhus it took almost 1hr for extracting the features but as its top-5 error on Imagenet is 7.3%, thus it better represents ann image. On other hand, InceptionV3 and Resnet-50 has 21 million parameters, thus in just 20mins extracted features but as InceptionV3's top-5 error on Imagenet is 3.46% and that of Resnet-50 is much lesser, thus both models represents images in less depth.
+
 #### Step 2) Cleaning all the captions
 Then all training and texting captions are cleaned and pre-processed by tokenizing, converting to lower case, removing punctuation and single letter words (“s” and “a”). Then to each caption, we add the start and end signs, “startseq” and “endseq” respectively.
 Describe uses both Natural Language Processing and Computer Vision to generate the captions that gives description of an input image. 
