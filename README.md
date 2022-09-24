@@ -35,6 +35,28 @@ Describe uses both Natural Language Processing and Computer Vision to generate t
 #### Step 3) Seperating training captions and image-encodings from overall data
 #### Step 4) For training captions, creating vocabulary of most occuring words and creating the word <--> index mappers
 #### Step 5) Using GloVe to generate embeddings for each word in the vocabulary. This vocabulary has most occuring words present in training captions
+#### Step 6) Scripting `data_generator` function
+The need of this function will be to convert total training data (i.e. image encodings+captions) into multiple batches comprising of 36 training captions and corresponding 36 image-encodings. This is done so that at a single time during training phase, there will be no need to upload whole training data.
+
+For example, it takes input of a single batch comprising of following 36 training captions and corresponding 36 image-encodings:
+
+1st data --> Encoding_of_pic1 & startseq Ram is boy endseq <br>
+2nd data --> Encoding_of_pic2 & startseq dog is barking endseq <br>
+. <br>
+. <br>
+18th data --> Encoding_of_pic18 & startseq it is book endseq <br>
+. <br>
+. <br>
+36th data --> Encoding_of_pic36 & startseq snow is falling endseq 
+
+After that it will convert it into following format:
+
+![bandicam 2021-05-09 23-41-16-619](https://user-images.githubusercontent.com/71775151/117582876-cd387b00-b121-11eb-8ab4-9e1f87115ba2.jpg)
+
+Then it will push this whole single batch to flow into `training_model` to train it.
+
+
+
 
 ![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
 
@@ -52,36 +74,6 @@ It comprises of three main components:
 
 
 **Understanding some code parts of training file**
-
-**a) Scripting function called "data_generator"**
-
-The need of this function will be to make training data (i.e. image encodings+captions) in format suitable for training. This function will also create multiple batches of size 36 each so that at a single time during training phase there will be no need to upload whole training data.
-
-So, this function at a particular time will take 36 training captions and corresponding 36 image-encodings in a single batch like:
-
-1st data --> Encoding_of_pic1 & startseq Ram is boy endseq
-
-2nd data --> Encoding_of_pic2 & startseq dog is barking endseq
-
-.
-
-.
-
-18th data --> Encoding_of_pic18 & startseq it is book endseq
-
-.
-
-.
-
-36th data --> Encoding_of_pic36 & startseq snow is falling endseq
-
-After that it will split each of 36 captions in following format:
-
-![bandicam 2021-05-09 23-41-16-619](https://user-images.githubusercontent.com/71775151/117582876-cd387b00-b121-11eb-8ab4-9e1f87115ba2.jpg)
-
-And once this function will collect dataset corresponding to 36 training image-encodings and captions, it will push this whole single batch to flow into "training_model" for training process.
-<br>
-<br>
 
 **b) Creating structure of training model and setting arguments of "compile" method** 
 
