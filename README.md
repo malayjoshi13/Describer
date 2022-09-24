@@ -21,6 +21,12 @@ https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sh
 
 ## 2) How is Decribe working?
 
+### 2.1) While training:-
+
+#### Step 1) Extracting features from images using VGG-16
+We just use it for extracting the features from the images. In order to do that we need to get rid of the last output layer from the model. The model then generates 4096 features from taking images of size (224,224,3).
+#### Step 2) Cleaning the caption data
+
 Describe uses both Natural Language Processing and Computer Vision to generate the captions that gives description of an input image. 
 
 ![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
