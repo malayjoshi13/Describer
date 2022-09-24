@@ -71,6 +71,9 @@ Now during backpropagation, the output predicted by model (which is actually the
 
 ![image](https://user-images.githubusercontent.com/71775151/192115701-accc9822-6aae-4a30-af51-d8c23b28c473.png)
 
+![image](https://user-images.githubusercontent.com/71775151/192117491-599ec8f0-9102-4837-ab45-35551ea39d90.png)
+
+
 #### Step 8) Evaluating trained model
 
 To evaluate the trained image-captioning model, first evaluation image is input to the model alongwith starting word "startseq". Model predicts word next to the starting word "startseq". Then again first word and second word alongwith the same first evaluation image is input to the trained model. Trained model now predicts third word. In same way, trained model predicts whole caption corresponding to first evaluation image. And gradually predicts all captions for all given evalauation images.
