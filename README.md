@@ -25,14 +25,16 @@ https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sh
 
 ### 2.1) While training:-
 
-#### Step 1) Extracting features from images using InceptionV3
-Training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
+#### Step 1) Encoding all the images using InceptionV3
+All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
 
-#### Step 2) Cleaning the captions
-Then training and tesxting captions are cleaned and pre-processed by tokenizing, converting to lower case, removing punctuation and single letter words (“s” and “a”). Then to each caption, we add the start and end signs, “startseq” and “endseq” respectively.
+#### Step 2) Cleaning all the captions
+Then all training and texting captions are cleaned and pre-processed by tokenizing, converting to lower case, removing punctuation and single letter words (“s” and “a”). Then to each caption, we add the start and end signs, “startseq” and “endseq” respectively.
 Describe uses both Natural Language Processing and Computer Vision to generate the captions that gives description of an input image. 
 
-#### Step 3) For training captions, creating vocabulary of most occuring words and creating the word <--> index mappers
+#### Step 3) Seperating training captions and image-encodings from overall data
+#### Step 4) For training captions, creating vocabulary of most occuring words and creating the word <--> index mappers
+#### Step 5) Using GloVe to generate embeddings for each word in the vocabulary. This vocabulary has most occuring words present in training captions
 
 ![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
 
