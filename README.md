@@ -11,7 +11,15 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
-## 1) What makes Decribe work?
+## 1) How to use Describe?
+
+### For prediction:- 
+https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
+
+### For training:
+https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
+
+## 2) How is Decribe working?
 
 Describe uses both Natural Language Processing and Computer Vision to generate the captions that gives description of an input image. 
 
@@ -28,15 +36,6 @@ It comprises of three main components:
 **1.3) Recurrent Neural Network acting as Decoder:** A type of RNN known as ```LSTM network``` (Long short-term memory) generates caption of every given image. It do so by taking input of feature vector of the given image and word embedding vector of the starting part of that image's caption and then keep on generating the next most probable words for this input partial caption (by considering the feature vector of image it is related to and the word embeddings of previous words).<br>
 
 ![0127](https://user-images.githubusercontent.com/71775151/114167969-42f7ce00-994d-11eb-962e-638cbe27bd28.jpg)
-
-<br><br>
-
-## 2) Usage
-
-### 2.2) Prediction and Training using Google Colaboratory
-Link for prediction file:- https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
-
-Link for training file:- https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
 
 
 **Understanding some code parts of training file**
