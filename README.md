@@ -36,9 +36,9 @@ Describe uses both Natural Language Processing and Computer Vision to generate t
 #### Step 4) For training captions, creating vocabulary of most occuring words and creating the word <--> index mappers
 #### Step 5) Using GloVe to generate embeddings for each word in the vocabulary. This vocabulary has most occuring words present in training captions
 #### Step 6) Scripting `data_generator` function
-The need of this function will be to convert total training data (i.e. image encodings+captions) into multiple batches comprising of 36 training captions and corresponding 36 image-encodings. This is done so that at a single time during training phase, there will be no need to upload whole training data.
+This function is needed to convert total training data (i.e. image encodings+captions) into multiple batches comprising of 35 training image-encodings and there corresponding captions, so that during training phase, there will be no need to upload whole training data all at once.
 
-For example, `data_generator` function takes input of a single batch comprising of following 36 training captions and corresponding 36 image-encodings:
+After splitting whole dataset into multiple batches, each batch look likes:
 
 1st data --> Encoding_of_pic1 & startseq Ram is boy endseq <br>
 2nd data --> Encoding_of_pic2 & startseq dog is barking endseq <br>
@@ -49,11 +49,11 @@ For example, `data_generator` function takes input of a single batch comprising 
 . <br>
 36th data --> Encoding_of_pic36 & startseq snow is falling endseq 
 
-And outputs data converted into following format:
+The data of each batch is then converted into following format:
 
 ![bandicam 2021-05-09 23-41-16-619](https://user-images.githubusercontent.com/71775151/117582876-cd387b00-b121-11eb-8ab4-9e1f87115ba2.jpg)
 
-Then `data_generator` function will push this whole single batch to flow into `training_model` to train it.
+Then these single-single batches will be pushed by `data_generator` function to flow into image-captioning model to train it.
 
 ### Step 7) Training the image-captioning model
 
