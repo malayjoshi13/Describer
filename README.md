@@ -9,13 +9,7 @@ BLEU-4: 0.095817
 
 https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-832c-b21f190bfe6f.mp4
 
-![96965447-cb162280-1529-11eb-8d54-4b1932950972](https://user-images.githubusercontent.com/71775151/114160431-8ac62780-9944-11eb-9ea6-ba2ac1b2a7a9.png)
-
-![96965388-b0dc4480-1529-11eb-89d9-5c3dbb037e0d](https://user-images.githubusercontent.com/71775151/114160437-8d288180-9944-11eb-960c-3acd586e70c6.png)
-
-![96965333-97d39380-1529-11eb-8f0e-1ac51c337c4d](https://user-images.githubusercontent.com/71775151/114160441-8e59ae80-9944-11eb-8568-876859131246.png)
-
-![96964503-30691400-1528-11eb-9b5a-821e9984aa33](https://user-images.githubusercontent.com/71775151/114160445-8f8adb80-9944-11eb-823e-68a71ecaa72a.png)
+![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
 ## 1) What makes Decribe work?
 
