@@ -85,7 +85,7 @@ Then these predicted captions are matched with actual captions of the evaluation
 
 
 ## 3) Things learnt
-a) different layers and activation fns and types of CNN - https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/, b) RNN, LSTM, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model, f) attention with captioning - https://medium.com/swlh/image-captioning-using-attention-mechanism-f3d7fc96eb0e, g) BLEU score, h) marge model (we used) vs inject model
+a) different layers and activation fns and types of CNN - https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/, b) RNN, LSTM, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model, f) attention with captioning - https://medium.com/swlh/image-captioning-using-attention-mechanism-f3d7fc96eb0e, g) BLEU score, h) marge model (we used as better https://arxiv.org/pdf/1708.02043.pdf) vs inject model
 
 ## 4) Read
-a) https://towardsdatascience.com/a-guide-to-image-captioning-e9fd5517f350, b) https://arxiv.org/abs/1612.01887, c) https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/, d) https://arxiv.org/abs/1411.4555, e) https://arxiv.org/abs/1502.03044, f) https://arxiv.org/abs/1703.09137, g) https://arxiv.org/abs/1708.02043, h) https://arxiv.org/abs/1601.03896
+a) https://towardsdatascience.com/a-guide-to-image-captioning-e9fd5517f350, b) https://arxiv.org/abs/1612.01887, c) https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/, d) https://arxiv.org/abs/1411.4555, e) https://arxiv.org/abs/1502.03044, f) https://arxiv.org/abs/1703.09137, g) https://arxiv.org/abs/1601.03896
