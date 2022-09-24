@@ -2,7 +2,7 @@ This file contains all the topics that I learned while working on this project.
 
 # Flickr8k
 
-Request the dataset from this link https://illinois.edu/fb/sec/1713398. The dataset consists of 8,000 images that are each paired with five different captions. This whole dataset comes into following files and folders:
+Request the dataset from this link https://illinois.edu/fb/sec/1713398. The dataset consists of 8,000 images (out of which 6000 are training images, 1000 are validation images and 1000 are testing images) that are each paired with five different captions. This whole dataset comes into following files and folders:
 
 Flickr8k.token.txt contains the raw captions of the Flickr8k Dataset. For our project we renamed it as `captions.txt`. <br> 
 Flickr_8k.trainImages.txt contains the names of training images. For our project we renamed it as `TrainImagesName.txt`. <br>
