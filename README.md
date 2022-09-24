@@ -38,7 +38,7 @@ Describe uses both Natural Language Processing and Computer Vision to generate t
 #### Step 6) Scripting `data_generator` function
 The need of this function will be to convert total training data (i.e. image encodings+captions) into multiple batches comprising of 36 training captions and corresponding 36 image-encodings. This is done so that at a single time during training phase, there will be no need to upload whole training data.
 
-For example, it takes input of a single batch comprising of following 36 training captions and corresponding 36 image-encodings:
+For example, `data_generator` function takes input of a single batch comprising of following 36 training captions and corresponding 36 image-encodings:
 
 1st data --> Encoding_of_pic1 & startseq Ram is boy endseq <br>
 2nd data --> Encoding_of_pic2 & startseq dog is barking endseq <br>
@@ -49,13 +49,19 @@ For example, it takes input of a single batch comprising of following 36 trainin
 . <br>
 36th data --> Encoding_of_pic36 & startseq snow is falling endseq 
 
-After that it will convert it into following format:
+And outputs data converted into following format:
 
 ![bandicam 2021-05-09 23-41-16-619](https://user-images.githubusercontent.com/71775151/117582876-cd387b00-b121-11eb-8ab4-9e1f87115ba2.jpg)
 
-Then it will push this whole single batch to flow into `training_model` to train it.
+Then `data_generator` function will push this whole single batch to flow into `training_model` to train it.
 
+### Step 7) Training the image-captioning model
 
+As the training process starts, first pair of image-encoding and its corresponding 5 captions belonging to first batch flows into the image-captioning model. 
+
+Image-captioning model comprises of two input pipelines. As the training process starts, first input pipeline, aka `image-encoding pipeline` accepts first image's encoding present in `X1` container (coming from `data_generator` function) via `input1` entrance. This encoding is then passed through dropout and dense layer (which compressing encodings into dimension of 256 as we will be using LSTM of 256 cells). At last, this encoding will wait for first caption (corresponding to first image) at `layer2` exit point of `image-encoding pipeline`. 
+
+Second pipeline, aka `caption pipeline` accepts first partial caption (corresponding to first training image) present in `X2` container (coming from `data_generator` function) via `input2` entrance. This partial caption is then passed through embedding layer (which will encode this partial caption using weights of Glove), dropout layer and then LSTM layer (having 256 cells which understands sequencing of words in first partial caption). At last, the partial caption comes to `layerC` exit point of `caption pipeline`.
 
 
 ![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
@@ -64,9 +70,7 @@ It comprises of three main components:
 
 **1.1) Convolutional Neural Network (CNN) acting as Encoder:** A pre-trained CNN known as ```InceptionV3``` is used as an encoder to obtain feature vector of every image from its (i.e. InceptionV3) second last layer (beacuse last layer of every CNN is a softmax layer which gives prediction probability).<br>
 
-![Schematic-diagram-of-InceptionV3-model-compressed-view](https://user-images.githubusercontent.com/71775151/114168447-e47f1f80-994d-11eb-830b-aa212eadebc2.jpg)
-
-**1.2) Word embedding model:** Since the number of unique words can be very large, thus doing one hot encoding of the words is not a good idea. Therefore, a pre-trained embedding model called ```GloVe``` is used that takes every word of every training caption and outputs the corresponding word embedding vector. 
+![Schematic-diagram-of-InceptionV3-model-compressed-view](https://user-images.githubusercontent.com/71775151/114168447-e47f1f80-994d-11eb-830b-aa212eadebc2.jpg) 
 
 **1.3) Recurrent Neural Network acting as Decoder:** A type of RNN known as ```LSTM network``` (Long short-term memory) generates caption of every given image. It do so by taking input of feature vector of the given image and word embedding vector of the starting part of that image's caption and then keep on generating the next most probable words for this input partial caption (by considering the feature vector of image it is related to and the word embeddings of previous words).<br>
 
