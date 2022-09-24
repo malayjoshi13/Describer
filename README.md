@@ -1,10 +1,10 @@
 # Describe
 Describe is a machine learning based **image captioning system** which by help of ***InceptionV3 model*** (a type of convolutional neural network, [read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)) and ***long short term memory model (LSTM)*** (a type of recurrent neural network, [read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)) fine tuned on ***Flickr8k data*** ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md/#flickr8k)), generates textual captions describing about images feed to it. 
 
-Got following BLEU scores (Bilingual Evaluation Understudy Score) during model evaluation:
-BLEU-1: 0.475314,
-BLEU-2: 0.288632,
-BLEU-3: 0.202204,
+Got following BLEU scores ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md/#flickr8k)) during model evaluation:
+BLEU-1: 0.475314,<br>
+BLEU-2: 0.288632,<br>
+BLEU-3: 0.202204,<br>
 BLEU-4: 0.095817
 
 https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-832c-b21f190bfe6f.mp4
