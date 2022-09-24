@@ -69,19 +69,13 @@ Now outputs from the two input pipelines get merge at `merging_point` layer. We 
 
 Now during backpropagation, the output predicted by model (which is actually the word next to the incomplete/partial training caption feeded to the model as input during training phase) is compared with the actual word (which should be actually present next to the incomplete training caption feeded as input to model during training phase). And the mission during whole backpropagation is to just minimise this gap between what word was aimed and what word is predicted by model. 
 
+![image](https://user-images.githubusercontent.com/71775151/192115701-accc9822-6aae-4a30-af51-d8c23b28c473.png)
+
 #### Step 8) Evaluating trained model
 
 To evaluate the trained image-captioning model, first evaluation image is input to the model alongwith starting word "startseq". Model predicts word next to the starting word "startseq". Then again first word and second word alongwith the same first evaluation image is input to the trained model. Trained model now predicts third word. In same way, trained model predicts whole caption corresponding to first evaluation image. And gradually predicts all captions for all given evalauation images.
 
 Then these predicted captions are matched with actual captions of the evaluation images. How closely the two sentences matches to each other is highlighted by BLEU score ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)).
-
-
-
-
-![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
- 
-
-![bandicam 2021-05-09 01-55-49-417](https://user-images.githubusercontent.com/71775151/117552662-6c9a3700-b06a-11eb-9add-e0e0ec47fbca.jpg)
 
 
 ## 3) Things learnt
