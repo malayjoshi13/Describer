@@ -13,17 +13,17 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
 
 ## 1) How to use Describe?
 
-### 1.1) For training:-
+### 1.1) For training and evaluation of trained model:-
 
 - After downloading and placing dataset files (by following descriptions in [link](https://github.com/malayjoshi13/Describe/blob/main/learnings.md/#flickr8k)), 
 https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
 
-### 1.2) For prediction:- 
+### 1.2) For inference:- 
 https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
 
-## 2) How is Describe working?
+## 2) Working of Describe
 
-### 2.1) While training:-
+### 2.1) While training and evaluation:-
 
 #### Step 1) Encoding all the images using InceptionV3
 All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)) whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
@@ -55,7 +55,7 @@ The data of each batch is then converted into following format:
 
 Then these single-single batches will be pushed by `data_generator` function to flow into image-captioning model to train it.
 
-### Step 7) Training the image-captioning model
+#### Step 7) Training the image-captioning model
 
 As the training process starts, first pair of image-encoding and its corresponding 5 captions belonging to first batch flows into the image-captioning model. 
 
@@ -66,6 +66,13 @@ Second pipeline, aka `caption pipeline` accepts first partial caption (correspon
 Now outputs from the two input pipelines get merge at `merging_point` layer. We do this so that we get training input in form "image encoding + corresponding partial caption". This merged input is then passed to dropout layer and softmax layer which will output probability distribution that across 1798 words (present in vocabulary made using most occuring words), which word could be possible next word in continuation to "X2" (partial caption feeded to model as input, during training time).
 
 Now during backpropagation, the output predicted by model (which is actually the word next to the incomplete/partial training caption feeded to the model as input during training phase) is compared with the actual word (which should be actually present next to the incomplete training caption feeded as input to model during training phase). And the mission during whole backpropagation is to just minimise this gap between what word was aimed and what word is predicted by model. 
+
+#### Step 8) Evaluating trained model
+
+To evaluate the trained image-captioning model, first evaluation image is input to the model alongwith starting word "startseq". Model predicts word next to the starting word "startseq". Then again first word and second word alongwith the same first evaluation image is input to the trained model. Trained model now predicts third word. In same way, trained model predicts whole caption corresponding to first evaluation image. And gradually predicts all captions for all given evalauation images.
+
+Then these predicted captions are matched with actual captions of the evaluation images. How closely the two sentences matches to each other is highlighted by BLEU score ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)).
+
 
 
 
