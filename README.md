@@ -63,6 +63,11 @@ Image-captioning model comprises of two input pipelines. As the training process
 
 Second pipeline, aka `caption pipeline` accepts first partial caption (corresponding to first training image) present in `X2` container (coming from `data_generator` function) via `input2` entrance. This partial caption is then passed through embedding layer (which will encode this partial caption using weights of Glove), dropout layer and then LSTM layer (having 256 cells which understands sequencing of words in first partial caption). At last, the partial caption comes to `layerC` exit point of `caption pipeline`.
 
+Now outputs from the two input pipelines get merge at `merging_point` layer. We do this so that we get training input in form "image encoding + corresponding partial caption". This merged input is then passed to dropout layer and softmax layer which will output probability distribution that across 1798 words (present in vocabulary made using most occuring words), which word could be possible next word in continuation to "X2" (partial caption feeded to model as input, during training time).
+
+Now during backpropagation, the output predicted by model (which is actually the word next to the incomplete/partial training caption feeded to the model as input during training phase) is compared with the actual word (which should be actually present next to the incomplete training caption feeded as input to model during training phase). And the mission during whole backpropagation is to just minimise this gap between what word was aimed and what word is predicted by model. 
+
+
 
 ![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
 
@@ -76,22 +81,10 @@ It comprises of three main components:
 
 ![0127](https://user-images.githubusercontent.com/71775151/114167969-42f7ce00-994d-11eb-962e-638cbe27bd28.jpg)
 
-
-**Understanding some code parts of training file**
-
-**b) Creating structure of training model and setting arguments of "compile" method** 
+ 
 
 ![bandicam 2021-05-09 01-55-49-417](https://user-images.githubusercontent.com/71775151/117552662-6c9a3700-b06a-11eb-9add-e0e0ec47fbca.jpg)
 
-i) On executing ```(STEP 5)```, the structure of our model called as "training_model" will be created. This structure will start from "inputs" layer which will further split into "inputs1" and "inputs2" layers. These two layers will take input data from "data_generator" function (refer STEP 3.2.5) by help of Keras's "Input" layer. 
-
-ii) Input data of type partial/incomplete captions enters "inputs2" via "Input" layer of Keras, gets stored in it and then when it is about to be output from "inputs1" then "Embedding" layer of Keras acts further on output given out by "inputs1" so as to convert these partial captions flowing out of "inputs1" into their embeddings and save them in "layerA" (i.e. in numerical form for computer to understand). Then further "Dropout" layer of Keras acts and in every iteration keeps only 50% of neurons (in alternating manner) in active mode to remember the patterns in words and save these observations in "layerB". After this, "layerB" outputs these observations and LSTM model remembers sequencing of words in training captions. Once done, LSTM model save these rememberings in "layerC".
-
-iii) Now in parallel to this process of building structure for textul data, another process of building structure of model for training on image-encodings is also going hand-in-hand. For this first image-encodings through "Inputs" layer of Keras enters "inputs2". After that a "Dropout" layer acts upon and keeps only 50% of neurons active (in alternating manner) in every iteration to learn patterns in image-encodings of training images and save these observations in "layer1". The output from this layer is then worked upon by "dense" layer of Keras which changes dimension of image encodings and save them to "layer2".
-
-iv) After this the outputs from "layerC" and "layer2" (which are memorization of LSTM and modified dimensioned image-encodings respectively) merge together via "add" layer of "Keras.merge" and save them into "merging_point". Then "relu" activation is applied over output given out by "merging_point" so as to make the output graph non-linear to be fit well around the training data. This non-linear graph is then saved in "activator". Then at last with help of "softmax" layer our model predicts one word out of all words posssible to be the next word of the input partial/incomplete caption feeded to the model for training purpose and save it in "outputs". The number of possibilities of predicting such word = total words in "most_occuring_words" list = "vocab_size" = 1798.
-
-v) Once the structure for our model to be trained called as "training_model" is been constructed, the next job set the arguments of "compile" method which will configure the model for training time and based upon their actions the weights of training model will be updated during backpropagation process. Now let us understand what happens in backpropagation process. So during this process the output predicted by model (which is actually the word next to the incomplete/partial input training caption) is compared with the word which is goaled/aimed to be present next to the incomplete training caption. And the mission during whole backpropagation is to just minimise this gap between what was aimed and what is actually predicted by model.
 
 ## 3) Things learnt
 a) different layers and activation fns and types of CNN - https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/, b) RNN, LSTM, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model, f) attention with captioning - https://medium.com/swlh/image-captioning-using-attention-mechanism-f3d7fc96eb0e, g) BLEU score, h) marge model (we used) vs inject model
