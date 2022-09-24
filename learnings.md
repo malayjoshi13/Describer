@@ -12,3 +12,6 @@ Flickr8k_Dataset contains all the images (train+val+test). For our project we re
 
 ![image](https://user-images.githubusercontent.com/71775151/192083276-df0a8530-3966-49fd-ad5b-7e0dc19990ff.png)
 
+# Glove
+Since the number of unique words can be very large, thus doing one hot encoding of the words is not a good idea. Therefore, a pre-trained embedding model called ```GloVe``` is used that takes every word of every training caption and outputs the corresponding word embedding vector. 
+
