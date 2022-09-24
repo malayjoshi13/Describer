@@ -26,7 +26,7 @@ https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sh
 ### 2.1) While training:-
 
 #### Step 1) Encoding all the images using InceptionV3
-All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
+All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)) whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
 
 #### Step 2) Cleaning all the captions
 Then all training and texting captions are cleaned and pre-processed by tokenizing, converting to lower case, removing punctuation and single letter words (“s” and “a”). Then to each caption, we add the start and end signs, “startseq” and “endseq” respectively.
@@ -61,7 +61,7 @@ As the training process starts, first pair of image-encoding and its correspondi
 
 Image-captioning model comprises of two input pipelines. As the training process starts, first input pipeline, aka `image-encoding pipeline` accepts first image's encoding present in `X1` container (coming from `data_generator` function) via `input1` entrance. This encoding is then passed through dropout and dense layer (which compressing encodings into dimension of 256 as we will be using LSTM of 256 cells). At last, this encoding will wait for first caption (corresponding to first image) at `layer2` exit point of `image-encoding pipeline`. 
 
-Second pipeline, aka `caption pipeline` accepts first partial caption (corresponding to first training image) present in `X2` container (coming from `data_generator` function) via `input2` entrance. This partial caption is then passed through embedding layer (which will encode this partial caption using weights of Glove), dropout layer and then LSTM layer (having 256 cells which understands sequencing of words in first partial caption). At last, the partial caption comes to `layerC` exit point of `caption pipeline`.
+Second pipeline, aka `caption pipeline` accepts first partial caption (corresponding to first training image) present in `X2` container (coming from `data_generator` function) via `input2` entrance. This partial caption is then passed through embedding layer (which will encode this partial caption using weights of Glove), dropout layer and then LSTM layer (having 256 cells which understands sequencing of words in first partial caption, [read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)). At last, the partial caption comes to `layerC` exit point of `caption pipeline`.
 
 Now outputs from the two input pipelines get merge at `merging_point` layer. We do this so that we get training input in form "image encoding + corresponding partial caption". This merged input is then passed to dropout layer and softmax layer which will output probability distribution that across 1798 words (present in vocabulary made using most occuring words), which word could be possible next word in continuation to "X2" (partial caption feeded to model as input, during training time).
 
@@ -70,17 +70,6 @@ Now during backpropagation, the output predicted by model (which is actually the
 
 
 ![image](https://user-images.githubusercontent.com/71775151/192044962-ebe4a6f3-f8b7-4003-9b33-0bb3594191f8.png)
-
-It comprises of three main components:
-
-**1.1) Convolutional Neural Network (CNN) acting as Encoder:** A pre-trained CNN known as ```InceptionV3``` is used as an encoder to obtain feature vector of every image from its (i.e. InceptionV3) second last layer (beacuse last layer of every CNN is a softmax layer which gives prediction probability).<br>
-
-![Schematic-diagram-of-InceptionV3-model-compressed-view](https://user-images.githubusercontent.com/71775151/114168447-e47f1f80-994d-11eb-830b-aa212eadebc2.jpg) 
-
-**1.3) Recurrent Neural Network acting as Decoder:** A type of RNN known as ```LSTM network``` (Long short-term memory) generates caption of every given image. It do so by taking input of feature vector of the given image and word embedding vector of the starting part of that image's caption and then keep on generating the next most probable words for this input partial caption (by considering the feature vector of image it is related to and the word embeddings of previous words).<br>
-
-![0127](https://user-images.githubusercontent.com/71775151/114167969-42f7ce00-994d-11eb-962e-638cbe27bd28.jpg)
-
  
 
 ![bandicam 2021-05-09 01-55-49-417](https://user-images.githubusercontent.com/71775151/117552662-6c9a3700-b06a-11eb-9add-e0e0ec47fbca.jpg)
