@@ -38,6 +38,9 @@ Models saved in .hdf5 format are great because the whole model is one place and 
 
 https://machinelearningmastery.com/save-load-keras-deep-learning-models/
 
+If you only save weights, then do as below:-
+![image](https://user-images.githubusercontent.com/71775151/192160237-2ad1f5f1-bac8-4936-b59a-02555666d311.png)
+
 # Model checkpoint
 While using model checkpoint, I used minimum val loss as paramater to save weights(if save_weights_only=True) or whole model(if save_weights_only=False), coz such models are more tend to overfitting, which can be prevented if both val and train losses are nearly equal and minimum. So once we save all min val losses, we will see out of all the min val losses, at which min val loss, train loss is also min and nearly equal to the min val loss. 
 
