@@ -38,5 +38,10 @@ Models saved in .hdf5 format are great because the whole model is one place and 
 
 https://machinelearningmastery.com/save-load-keras-deep-learning-models/
 
+# Model checkpoint
+While using model checkpoint, I used minimum val loss as paramater to save weights(if save_weights_only=True) or whole model(if save_weights_only=False), coz such models are more tend to overfitting, which can be prevented if both val and train losses are nearly equal and minimum. So once we save all min val losses, we will see out of all the min val losses, at which min val loss, train loss is also min and nearly equal to the min val loss.
+
+Now in order to save weights at every iteration I use `weights-improvement-{epoch:02d}-{val_accuracy:.2f}.hdf5` as file name of saved weights as being unique, the newer weights will not replace already saved prev weights. But if I would wanted to not save weights in every iterations but just to save the best one then I would use `weights.best.hdf5` as filename, coz being unique filename of weights, new weights will replace prev weights thus saving only one best weight not all best ones.
+
 
 
