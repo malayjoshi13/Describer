@@ -88,6 +88,9 @@ To evaluate the trained image-captioning model, first evaluation image is input 
 
 Then these predicted captions are matched with actual captions of the evaluation images. How closely the two sentences matches to each other is highlighted by BLEU score ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)).
 
+### 2.2) While inferencing:-
+
+The process happening for multiple evaluation imsges happens in same way for single inference image.
 
 ## 3) Things learnt
 a) different layers and activation fns and adam is best - https://arxiv.org/pdf/1708.02043.pdf and cross-entropy loss satisfies the above criteria and is therefore a decent loss function for classification problems. Although our problem's a sequence output problem, at every time-step, it is spitting out a probability distribution of words from which we are picking the one having max probability. So, fundamentally at a step level, it is still a classification problem. and Number of Epochs: There's no way to know for sure how many epochs will be needed for training a deep learning model. We only know that as long as both train loss and validation loss are on a decline, we need to continue training the model as it has scope to learn more and improve. In the above case, we can observe that after around the 10th epoch, our model went haywire and started overfitting. So, this is a good cue to stop training.
