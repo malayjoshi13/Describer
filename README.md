@@ -15,8 +15,17 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
 
 ### 1.1) For training and evaluation of trained model:-
 
-- After downloading and placing dataset files (by following descriptions in [link](https://github.com/malayjoshi13/Describe/blob/main/learnings.md/#flickr8k)), 
-https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
+- Create a directory in your Google Drive of name `Describe`.
+- Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describe/dataset` folder in your Google Drive. 
+- Now rename few files in `/dataset` folder to following filenames:-<br>
+  - Flickr8k.token.txt to `captions.txt`. <br> 
+  - Flickr_8k.trainImages.txt to `TrainImagesName.txt`. <br>
+  - Flickr_8k.devImages.txt to `DevImagesName.txt`. <br>
+  - Flickr_8k.testImages.txt to `TestImagesName.txt`. <br>
+  - Flickr8k_Dataset contains to `All_images`.
+- Copy following Colab script in the `Describe` directory in your Google Drive. Now according to where you created `Describe` directory in your Google Drive, give that location within the following script. 
+
+Colab script for training: https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing
 
 ### 1.2) For inference:- 
 https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
