@@ -43,5 +43,8 @@ While using model checkpoint, I used minimum val loss as paramater to save weigh
 
 Now in order to save weights at every iteration I use `weights-improvement-{epoch:02d}-{val_accuracy:.2f}.hdf5` as file name of saved weights as being unique, the newer weights will not replace already saved prev weights. But if I would wanted to not save weights in every iterations but just to save the best one then I would use `weights.best.hdf5` as filename, coz being unique filename of weights, new weights will replace prev weights thus saving only one best weight not all best ones.
 
+# Use EarlyStopping Together with Checkpoint
+In the examples above, an attempt was made to fit your model with 150 epochs. In reality, it is not easy to tell how many epochs you need to train your model. One way to address this problem is to overestimate the number of epochs. But this may take significant time. After all, if you are checkpointing the best model only, you may find that over the several thousand epochs run, you already achieved the best model in the first hundred epochs, and no more checkpoints are made afterward.
 
+It is quite common to use the ModelCheckpoint callback together with EarlyStopping. It helps to stop the training once no metric improvement is seen for several epochs.# 
 
