@@ -18,4 +18,18 @@ Since the number of unique words can be very large, thus doing one hot encoding 
 # Verbose in model.fit
 ![image](https://user-images.githubusercontent.com/71775151/192151776-6162f1c8-46b3-4794-8c13-6f67aa8e688d.png)
 
+# Training loss and Validation loss
+In machine learning and deep learning there are basically three cases
+
+1) Underfitting
+
+When training loss > validation_loss, as this means model is not even able to learn patterns in training data.
+
+2) Overfitting
+
+When loss << validation_loss, as this means that your model is fitting very nicely to training data but not at all generalizing to the validation data (which is unseen data)
+
+3) Perfect fitting
+
+loss == validation_loss + both the values are converging/decreasing (plot the loss over time) then chances are very high that you are doing it right
 
