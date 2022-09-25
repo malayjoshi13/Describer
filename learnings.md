@@ -36,3 +36,7 @@ loss == validation_loss + both the values are converging/decreasing (plot the lo
 # Saving weights or whole model?
 Models saved in .hdf5 format are great because the whole model is one place and can be loaded somewhere else, such as in deployment. However the files can get large, and saving your model at every epoch can get storage intensive fast. One option available in the ModelCheckpoint callback constructor is save_weights_only=True. This will save space, but will not save the entire model architecture. In order to recover it, you would rebuild the model and then assign the saved weights, rather than just loading it all in one step.
 
+https://machinelearningmastery.com/save-load-keras-deep-learning-models/
+
+
+
