@@ -59,7 +59,7 @@ It is quite common to use the ModelCheckpoint callback together with EarlyStoppi
 
 # Validation helps to see if overfitting dont happens
 
-# Future: 
+# Future 
 gridsearchCV,<br>
 cross-validation instead of validation (https://www.quora.com/What-is-the-difference-between-validation-and-cross-validation , https://www.google.com/search?q=k+fold+cross+validation+vs+shuffle&client=ms-android-samsung-ga-rev1&sxsrf=ALiCzsblth3GLcpe7H38ZuL6XrCHITE6Mw%3A1665321266679&ei=MslCY-79KKuB3LUPw7-kqAc&oq=k+fold+cross+validation+vs+shuffl&gs_lcp=ChNtb2JpbGUtZ3dzLXdpei1zZXJwEAEYADIHCCEQoAEQCjIHCCEQoAEQCjIHCCEQoAEQCjoKCAAQRxDWBBCwAzoECCMQJzoGCAAQHhAWOgUIABCGAzoFCAAQgAQ6BwgAEIAEEAo6BQghEKABOggIIRAeEBYQHUoECEEYAFCrFViJQ2DDVGgBcAB4AIABpQOIAcwhkgEIMi0xNS4xLjGYAQCgAQHIAQjAAQE&sclient=mobile-gws-wiz-serp),<br>
 use larger dataset,<br>
