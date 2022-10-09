@@ -1,5 +1,37 @@
 This file contains all the topics that I learned while working on this project.
 
+# 3 possible structures of image-captioning models:-
+
+1) Generate the Whole Sequence
+
+![image](https://user-images.githubusercontent.com/71775151/194770885-f68100eb-b263-4074-aa36-ef0e1658f680.png)
+
+This is a one-to-many sequence prediction model that generates the entire output in a one-shot manner given the input photograph. This model puts a heavy burden on the language model to generate the right words in the right order. Sometimes a same word is repeated in the whole output sentence.
+
+2) Generate Word from Word
+
+![image](https://user-images.githubusercontent.com/71775151/194771051-e16c63fc-9ffa-46c8-a90d-faccb623e0af.png)
+
+This is a one-to-one sequence prediction model where the LSTM generates a prediction of one word given a photograph and one word as input. The recursive word generation process is repeated until an end of sequence token is generated.
+
+Input 1: Photograph <br>
+Input 2: One word of sequence. This one word input is either a token to indicate the start of the sequence in the case of the first time the model is called, or is the word generated from the previous time the model was called <br>
+Output: Next word in sequence <br>
+
+The model does generate some good n-gram sequences, but gets caught in a loop repeating the same sequences of words for long descriptions. There is insufficient memory in the model to remember what has been generated previously.
+
+3) Generate Word from Sequence
+
+![image](https://user-images.githubusercontent.com/71775151/194771085-4a1871b1-a875-412a-b2ce-61f6601547a3.png)
+
+This is a many-to-one sequence prediction model where given a photograph and a sequence of words already generated for the photograph as input, predict the next word in the description.
+
+Input 1: Photograph <br>
+Input 2: Previously generated sequences of words, or start of sequence token <br>
+Output: Next word in sequence <br>
+
+It is a generalization of the above Model 2 where the input sequence of words gives the model a context for generating the next word in the sequence. The model does readily generate readable descriptions, the quality of which is often refined by larger models trained for longer. We have used this kind of model in Describe.
+
 # Flickr8k
 
 Request the dataset from this link https://illinois.edu/fb/sec/1713398. The dataset consists of 8,000 images (out of which 6000 are training images, 1000 are validation images and 1000 are testing images) that are each paired with five different captions. This whole dataset comes into following files and folders:
