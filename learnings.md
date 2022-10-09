@@ -53,5 +53,5 @@ In the examples above, an attempt was made to fit your model with 150 epochs. In
 
 It is quite common to use the ModelCheckpoint callback together with EarlyStopping. It helps to stop the training once no metric improvement is seen for several epochs.# 
 
-# data generator
+# Data generator
 
