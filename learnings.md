@@ -56,8 +56,10 @@ It is quite common to use the ModelCheckpoint callback together with EarlyStoppi
 # Data generator
 
 # BLEU score
+Having high BLEU score always dont tells model is very good. Coz high BLEU score can also happen due to overfitting. In such case model will catch very minute details of image but caption generated will not be good. **Thus our aim should be to achieve high BLEU without overfitting model**. 
 
-# Validation helps to see if overfitting dont happens
+# Validation helps to see if overfitting dont happens. 
+Actually validation loss is increasing after 5th epoch but training loss keeps dec. It shows that overfitting is happening.
 
 # Future 
 gridsearchCV,<br>
