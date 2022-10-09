@@ -94,7 +94,7 @@ Having high BLEU score always dont tells model is very good. Coz high BLEU score
 Actually validation loss is increasing after 5th epoch but training loss keeps dec. It shows that overfitting is happening.
 
 # Tensorboard
-https://www.tensorflow.org/tensorboard/tensorboard_in_notebooks
+https://www.tensorflow.org/tensorboard/tensorboard_in_notebooks, https://www.youtube.com/watch?v=9SdLOcGnebU
 
 # Future 
 gridsearchCV,<br>
