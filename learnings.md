@@ -51,7 +51,7 @@ Now in order to save weights at every iteration I use `weights-improvement-{epoc
 # Use EarlyStopping Together with Checkpoint
 In the examples above, an attempt was made to fit your model with 150 epochs. In reality, it is not easy to tell how many epochs you need to train your model. One way to address this problem is to overestimate the number of epochs. But this may take significant time. After all, if you are checkpointing the best model only, you may find that over the several thousand epochs run, you already achieved the best model in the first hundred epochs, and no more checkpoints are made afterward.
 
-It is quite common to use the ModelCheckpoint callback together with EarlyStopping. It helps to stop the training once no metric improvement is seen for several epochs.# 
+It is quite common to use the ModelCheckpoint callback together with EarlyStopping. It helps to stop the training once no metric improvement is seen for several epochs.
 
 # Data generator
 
