@@ -66,12 +66,22 @@ When loss << validation_loss, as this means that your model is fitting very nice
 loss == validation_loss + both the values are converging/decreasing (plot the loss over time) then chances are very high that you are doing it right
 
 # Saving weights or whole model?
-Models saved in .hdf5 format are great because the whole model is one place and can be loaded somewhere else, such as in deployment. However the files can get large, and saving your model at every epoch can get storage intensive fast. One option available in the ModelCheckpoint callback constructor is save_weights_only=True. This will save space, but will not save the entire model architecture. In order to recover it, you would rebuild the model and then assign the saved weights, rather than just loading it all in one step.
 
-https://machinelearningmastery.com/save-load-keras-deep-learning-models/
+1) saving whole model<br>
+Either in the ModelCheckpoint callback do `save_weights_only=False` or once whole training ends simply do `name_of_model.save("model.h5")`. Then simply use the load model for either inferencing or to show people its BLEU score or continue model training by following way:-
 
-If you only save weights, then do as below:-
-![image](https://user-images.githubusercontent.com/71775151/192160237-2ad1f5f1-bac8-4936-b59a-02555666d311.png)
+![image](https://user-images.githubusercontent.com/71775151/195184231-75ad852a-5c43-4171-a7de-609c82bdee3a.png)
+
+Advantage: you dont need whole arhitecture whenever you want to use trained model. Simply load and use.
+Disadvantage: saving whole model in every epoch when using ModelCheckpoint callback, can be very space consuming.
+
+2) saving only weights<br>
+Either in the ModelCheckpoint callback do `save_weights_only=True` or once whole training ends simply do `name_of_model.save_weights("model_weights.h5")`. Then simply call the model structure, load the model weights into it and simply use model for either inferencing or to show people its BLEU score or continue model training by following way:-
+
+![image](https://user-images.githubusercontent.com/71775151/195185293-2c583d16-59ed-411e-9ce0-e6c2a59bb66b.png)
+
+Advantage: saving weights in every epoch is memory friendly process
+Disadvantage: you need whole arhitecture whenever you want to use trained model. 
 
 # Model checkpoint
 While using model checkpoint, I used minimum val loss as paramater to save weights(if save_weights_only=True) or whole model(if save_weights_only=False), coz such models are more tend to overfitting, which can be prevented if both val and train losses are nearly equal and minimum. So once we save all min val losses, we will see out of all the min val losses, at which min val loss, train loss is also min and nearly equal to the min val loss. 
