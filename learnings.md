@@ -73,6 +73,7 @@ Either in the ModelCheckpoint callback do `save_weights_only=False` or once whol
 ![image](https://user-images.githubusercontent.com/71775151/195184231-75ad852a-5c43-4171-a7de-609c82bdee3a.png)
 
 Advantage: you dont need whole arhitecture whenever you want to use trained model. Simply load and use.
+
 Disadvantage: saving whole model in every epoch when using ModelCheckpoint callback, can be very space consuming.
 
 2) saving only weights<br>
@@ -81,6 +82,7 @@ Either in the ModelCheckpoint callback do `save_weights_only=True` or once whole
 ![image](https://user-images.githubusercontent.com/71775151/195185293-2c583d16-59ed-411e-9ce0-e6c2a59bb66b.png)
 
 Advantage: saving weights in every epoch is memory friendly process
+
 Disadvantage: you need whole arhitecture whenever you want to use trained model. 
 
 # Model checkpoint
