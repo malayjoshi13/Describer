@@ -32,6 +32,8 @@ Output: Next word in sequence <br>
 
 It is a generalization of the above Model 2 where the input sequence of words gives the model a context for generating the next word in the sequence. The model does readily generate readable descriptions, the quality of which is often refined by larger models trained for longer. We have used this kind of model in Describe.
 
+# A.1) sequential model vs functional model, merge model (we used as better https://arxiv.org/pdf/1708.02043.pdf, https://arxiv.org/abs/1703.09137, https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/) vs inject model.
+
 # B) InceptionV3 (CNN models examples-https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/), LSTM and GRU (RNN-https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
 different layers of CNN and different activation fns in CNN 
