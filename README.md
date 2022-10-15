@@ -34,7 +34,7 @@ https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sh
 ### 2.1) While training and evaluation:-
 
 #### Step 1) Encoding all the images using InceptionV3
-All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)) whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
+All training and testing images of Flickr8k dataset of size (299, 299, 3) is firstly encoded into feature vector of length 4096 using InceptionV3 model whose last output layer is removed (as last layer of every CNN layer being softmax is used for classification task, which we are not doing here, so no need of last layer).
 
 For this task of extracting the features out of images, I tried out VGG-16, Resnet-50 and InceptionV3. Human top-5 error on Imagenet is 5.1%. VGG16 has almost 134 million parameters thhus it took almost 1hr for extracting the features but as its top-5 error on Imagenet is 7.3%, thus it better represents ann image. On other hand, InceptionV3 and Resnet-50 has 21 million parameters, thus in just 20mins extracted features but as InceptionV3's top-5 error on Imagenet is 3.46% and that of Resnet-50 is much lesser, thus both models represents images in less depth.
 
@@ -71,7 +71,7 @@ As the training process starts, first pair of image-encoding and its correspondi
 
 Image-captioning model comprises of two input pipelines. As the training process starts, first input pipeline, aka `image-encoding pipeline` accepts first image's encoding present in `X1` container (coming from `data_generator` function) via `input1` entrance. This encoding is then passed through dropout (50% dropout to reduce overfitting the training dataset, as this model configuration learns very fast) and dense layer (which compressing encodings into dimension of 256 as we will be using LSTM of 256 cells). At last, this encoding will wait for first caption (corresponding to first image) at `layer2` exit point of `image-encoding pipeline`. 
 
-Second pipeline, aka `caption pipeline` accepts first partial caption (corresponding to first training image) present in `X2` container (coming from `data_generator` function) via `input2` entrance. This partial caption is then passed through embedding layer (which will encode this partial caption using weights of Glove), dropout layer and then LSTM layer (having 256 cells which understands sequencing of words in first partial caption, [read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)). At last, the partial caption comes to `layerC` exit point of `caption pipeline`.
+Second pipeline, aka `caption pipeline` accepts first partial caption (corresponding to first training image) present in `X2` container (coming from `data_generator` function) via `input2` entrance. This partial caption is then passed through embedding layer (which will encode this partial caption using weights of Glove), dropout layer and then LSTM layer (having 256 cells which understands sequencing of words in first partial caption). At last, the partial caption comes to `layerC` exit point of `caption pipeline`.
 
 Now outputs from the two input pipelines get merge at `merging_point` layer. We do this so that we get training input in form "image encoding + corresponding partial caption". This merged input is then passed to dropout layer and softmax layer which will output probability distribution that across 1798 words (present in vocabulary made using most occuring words), which word could be possible next word in continuation to "X2" (partial caption feeded to model as input, during training time).
 
@@ -86,7 +86,7 @@ Now during backpropagation, the output predicted by model (which is actually the
 
 To evaluate the trained image-captioning model, first evaluation image is input to the model alongwith starting word "startseq". Model predicts word next to the starting word "startseq". Then again first word and second word alongwith the same first evaluation image is input to the trained model. Trained model now predicts third word. In same way, trained model predicts whole caption corresponding to first evaluation image. And gradually predicts all captions for all given evalauation images.
 
-Then these predicted captions are matched with actual captions of the evaluation images. How closely the two sentences matches to each other is highlighted by BLEU score ([read more](https://github.com/malayjoshi13/Describe/blob/main/learnings.md)).
+Then these predicted captions are matched with actual captions of the evaluation images. How closely the two sentences matches to each other is highlighted by BLEU score.
 
 ### 2.2) While inferencing:-
 
