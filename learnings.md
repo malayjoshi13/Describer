@@ -34,6 +34,12 @@ It is a generalization of the above Model 2 where the input sequence of words gi
 
 # B) InceptionV3 (CNN models examples-https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/), LSTM and GRU (RNN-https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
+different layers of CNN and different activation fns in CNN 
+
+and loss and optimizers in CNN - people say adam is best - https://arxiv.org/pdf/1708.02043.pdf and cross-entropy loss satisfies the above criteria and is therefore a decent loss function for classification problems. Although our problem's a sequence output problem, at every time-step, it is spitting out a probability distribution of words from which we are picking the one having max probability. So, fundamentally at a step level, it is still a classification problem. and 
+
+and number of epochs: There's no way to know for sure how many epochs will be needed for training a deep learning model. We only know that as long as both train loss and validation loss are on a decline, we need to continue training the model as it has scope to learn more and improve. In the above case, we can observe that after around the 10th epoch, our model went haywire and started overfitting. So, this is a good cue to stop training.
+
 # C) Flickr8k
 
 Request the dataset from this link https://illinois.edu/fb/sec/1713398. The dataset consists of 8,000 images (out of which 6000 are training images, 1000 are validation images and 1000 are testing images) that are each paired with five different captions. This whole dataset comes into following files and folders:
@@ -46,7 +52,7 @@ Flickr8k_Dataset contains all the images (train+val+test).
 
 ![image](https://user-images.githubusercontent.com/71775151/192083276-df0a8530-3966-49fd-ad5b-7e0dc19990ff.png)
 
-# D) Glove
+# D) Glove and wav2vec
 Since the number of unique words can be very large, thus doing one hot encoding of the words is not a good idea. Therefore, a pre-trained embedding model called ```GloVe``` is used that takes every word of every training caption and outputs the corresponding word embedding vector. 
 
 # E) Verbose in model.fit
