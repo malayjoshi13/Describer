@@ -90,20 +90,7 @@ Then these predicted captions are matched with actual captions of the evaluation
 
 ### 2.2) While inferencing:-
 
-The process happening for multiple evaluation imsges happens in same way for single inference image.
-
-## 3) Things learnt
-a) different layers and activation fns and adam is best - https://arxiv.org/pdf/1708.02043.pdf and cross-entropy loss satisfies the above criteria and is therefore a decent loss function for classification problems. Although our problem's a sequence output problem, at every time-step, it is spitting out a probability distribution of words from which we are picking the one having max probability. So, fundamentally at a step level, it is still a classification problem. and Number of Epochs: There's no way to know for sure how many epochs will be needed for training a deep learning model. We only know that as long as both train loss and validation loss are on a decline, we need to continue training the model as it has scope to learn more and improve. In the above case, we can observe that after around the 10th epoch, our model went haywire and started overfitting. So, this is a good cue to stop training.
-
-Although we trained our model further and tried to see if it could improve which didn't happen, we saved the model weights at each and every step of the way. We can therefore say that the model which is trained for 10 epochs is the best and must be deployed to predict on test images. and types of CNN - https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/, b) RNN, LSTM-https://colah.github.io/posts/2015-08-Understanding-LSTMs/, c) embedding model like Glove and word2vec, d) loss and optimizers, e) sequential model vs functional model, f) attention with captioning - https://medium.com/swlh/image-captioning-using-attention-mechanism-f3d7fc96eb0e, 
-
-g) BLEU score, 
-
-h) marge model (we used as better https://arxiv.org/pdf/1708.02043.pdf, https://arxiv.org/abs/1703.09137, https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/) vs inject model, 
-
-i) model.fit vs model.fit_generator (progressive loading, dont load whole data at once; good if you low memory)..........see you may think both uses batches, so then how generator one is good on memory? See fit first loads whole data (put pressure on memory to save whole data) and then picks data in batches for training......on other hand fit_generator picks data in batches and stores each batch in memory and then use it for training (here a batch is getting stored in memory not whole dataset)..........Generators are like any other functions in python but instead of using the return keyword it uses the yield keyword. The return keyword terminates the function and return all the values entirely whereas the yield keyword saves the state and continues from there successively. Also an important point to notice is that the yield keyword returns an object whose value can be accessed by using the next() method. So basically these generators help us saving RAM as unlike return statement it does not return all the values at once. 
-
-j) tensorboard
+The process happening for multiple evaluation images happens in same way for single inference image. 
 
 ## 4) Read
 a) https://towardsdatascience.com/a-guide-to-image-captioning-e9fd5517f350, b) https://arxiv.org/abs/1612.01887, c) https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/, d) https://arxiv.org/abs/1411.4555, e) https://arxiv.org/abs/1502.03044, f) https://arxiv.org/abs/1703.09137, g) https://arxiv.org/abs/1601.03896, h) https://cs.stanford.edu/people/karpathy/cvpr2015.pdf
