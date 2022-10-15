@@ -32,7 +32,7 @@ Output: Next word in sequence <br>
 
 It is a generalization of the above Model 2 where the input sequence of words gives the model a context for generating the next word in the sequence. The model does readily generate readable descriptions, the quality of which is often refined by larger models trained for longer. We have used this kind of model in Describe.
 
-# B) InceptionV3 (CNN), LSTM and GRU (RNN)
+# B) InceptionV3 (CNN models examples-https://pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/), LSTM and GRU (RNN-https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
 # C) Flickr8k
 
