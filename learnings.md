@@ -110,7 +110,11 @@ Actually validation loss is increasing after 5th epoch but training loss keeps d
 # M) Tensorboard
 https://www.tensorflow.org/tensorboard/tensorboard_in_notebooks, https://www.youtube.com/watch?v=9SdLOcGnebU
 
-# N) Future 
+# N) model.fit vs model.fit_generator 
+
+progressive loading, dont load whole data at once; good if you have low memory..........see you may think both uses batches, so then how generator one is good on memory? See fit first loads whole data (put pressure on memory to save whole data) and then picks data in batches for training......on other hand fit_generator picks data in batches and stores each batch in memory and then use it for training (here a batch is getting stored in memory not whole dataset)..........Generators are like any other functions in python but instead of using the return keyword it uses the yield keyword. The return keyword terminates the function and return all the values entirely whereas the yield keyword saves the state and continues from there successively. Also an important point to notice is that the yield keyword returns an object whose value can be accessed by using the next() method. So basically these generators help us saving RAM as unlike return statement it does not return all the values at once. 
+
+# O) Future 
 gridsearchCV,<br>
 cross-validation instead of validation (https://www.quora.com/What-is-the-difference-between-validation-and-cross-validation , https://www.google.com/search?q=k+fold+cross+validation+vs+shuffle&client=ms-android-samsung-ga-rev1&sxsrf=ALiCzsblth3GLcpe7H38ZuL6XrCHITE6Mw%3A1665321266679&ei=MslCY-79KKuB3LUPw7-kqAc&oq=k+fold+cross+validation+vs+shuffl&gs_lcp=ChNtb2JpbGUtZ3dzLXdpei1zZXJwEAEYADIHCCEQoAEQCjIHCCEQoAEQCjIHCCEQoAEQCjoKCAAQRxDWBBCwAzoECCMQJzoGCAAQHhAWOgUIABCGAzoFCAAQgAQ6BwgAEIAEEAo6BQghEKABOggIIRAeEBYQHUoECEEYAFCrFViJQ2DDVGgBcAB4AIABpQOIAcwhkgEIMi0xNS4xLjGYAQCgAQHIAQjAAQE&sclient=mobile-gws-wiz-serp),<br>
 use larger dataset,<br>
