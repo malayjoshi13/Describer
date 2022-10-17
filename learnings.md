@@ -75,9 +75,15 @@ When loss << validation_loss, as this means that your model is fitting very nice
 
 loss == validation_loss + both the values are converging/decreasing (plot the loss over time) then chances are very high that you are doing it right
 
-![image](https://user-images.githubusercontent.com/71775151/196262314-9c2d2b73-97b3-4f08-89a5-34ab2335eedd.png)
+![Uploading image.png…]()
 
-As seen froom this graph at epoch 16 (when train batch size is 30 samples), perfect fitting is happening and after that overfitting starts.
+[Blue for validation and orange for training]
+
+As seen froom this graph at epoch 16 (when train batch size is 30 samples), perfect fitting is happening and after that overfitting starts. 
+
+Also,
+
+![image](https://user-images.githubusercontent.com/71775151/196264555-925c5d2d-7c8b-4460-83ca-c483cbc6bed1.png)
 
 # G) Saving weights or whole model?
 
