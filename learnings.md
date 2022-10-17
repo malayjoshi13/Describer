@@ -75,7 +75,7 @@ When loss << validation_loss, as this means that your model is fitting very nice
 
 loss == validation_loss + both the values are converging/decreasing (plot the loss over time) then chances are very high that you are doing it right
 
-![image](https://user-images.githubusercontent.com/71775151/196265104-2b702fe0-2d34-41fa-acdc-618f5006141f.png)
+![image](https://user-images.githubusercontent.com/71775151/196265278-85911fa7-22d1-4725-9c6b-c608440b8dd3.png)
 
 [Blue for validation and orange for training]
 
@@ -83,7 +83,7 @@ As seen froom this graph at epoch 16 (when train batch size is 30 samples), perf
 
 Also,
 
-![image](https://user-images.githubusercontent.com/71775151/196264555-925c5d2d-7c8b-4460-83ca-c483cbc6bed1.png)
+![image](https://user-images.githubusercontent.com/71775151/196265104-2b702fe0-2d34-41fa-acdc-618f5006141f.png)
 
 # G) Saving weights or whole model?
 
