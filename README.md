@@ -23,7 +23,10 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
   - Flickr_8k.devImages.txt to `DevImagesName.txt`. <br>
   - Flickr_8k.testImages.txt to `TestImagesName.txt`. <br>
   - Flickr8k_Dataset contains to `All_images`.
-- Copy following Colab script in the `Describe` directory in your Google Drive. Now according to where you created `Describe` directory in your Google Drive, give that location within the following script. Colab script for training: https://drive.google.com/file/d/1ZPuK15FFpQt4kPeWRqZpz7qm2EJcmDwh/view?usp=sharing .
+- Copy following Colab script in the `Describe` directory in your Google Drive. Now according to where you created `Describe` directory in your Google Drive, give that location within the following script. 
+
+Colab script for training: https://drive.google.com/file/d/1yYFVjrQAGs9gDLpZAf4dx4QIU93X9Inw/view?usp=sharing .
+
 - Run each code cell of the above Colab script to train your model and evaluate it based on BLEU score.
 
 ### 1.2) For inference:- 
