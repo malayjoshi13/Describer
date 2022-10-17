@@ -75,7 +75,7 @@ When loss << validation_loss, as this means that your model is fitting very nice
 
 loss == validation_loss + both the values are converging/decreasing (plot the loss over time) then chances are very high that you are doing it right
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/71775151/196265104-2b702fe0-2d34-41fa-acdc-618f5006141f.png)
 
 [Blue for validation and orange for training]
 
