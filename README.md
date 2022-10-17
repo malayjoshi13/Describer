@@ -91,6 +91,3 @@ Then these predicted captions are matched with actual captions of the evaluation
 ### 2.2) While inferencing:-
 
 The process happening for multiple evaluation images happens in same way for single inference image. 
-
-## 4) Read
-a) https://towardsdatascience.com/a-guide-to-image-captioning-e9fd5517f350, b) https://arxiv.org/abs/1612.01887, c) https://machinelearningmastery.com/caption-generation-inject-merge-architectures-encoder-decoder-model/, d) https://arxiv.org/abs/1411.4555, e) https://arxiv.org/abs/1502.03044, f) https://arxiv.org/abs/1703.09137, g) https://arxiv.org/abs/1601.03896, h) https://cs.stanford.edu/people/karpathy/cvpr2015.pdf
