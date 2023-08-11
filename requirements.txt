@@ -1,4 +1,0 @@
-pillow
-tensorflow-cpu
-Flask
-gunicorn
