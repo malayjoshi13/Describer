@@ -8,8 +8,6 @@ BLEU-2: 0.288632,<br>
 BLEU-3: 0.202204,<br>
 BLEU-4: 0.095817
 
-https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-832c-b21f190bfe6f.mp4
-
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
 ## 1) Bring your own image and generate the most suited caption describing it (aka Inference)
