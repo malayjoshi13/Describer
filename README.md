@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
-### 1) Training and evaluating Describer -
+## 1) Training and evaluating Describer -
 
 - Create a directory in your Google Drive of name `Describe`.
 - Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describe/dataset` folder in your Google Drive. 
@@ -28,10 +28,10 @@ Colab script for training: https://drive.google.com/file/d/1yYFVjrQAGs9gDLpZAf4d
 
 - Run each code cell of the above Colab script to train your model and evaluate it based on BLEU score.
 
-### 2) Inferencing with Describer:- 
+## 2) Inferencing with Describer:- 
 https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing
 
-### 3) Working of Describer
+## 3) Working of Describer
 
 ### 2.1) While training and evaluation:-
 
