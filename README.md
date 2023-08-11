@@ -10,26 +10,23 @@ BLEU-4: 0.095817
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
-## 1) Bring your own image and generate the most suited caption describing it (aka Inference)
-Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image and get your captions!
-
-## 2) Training and Evaluating on your own dataset and hyperparameters to improve it further
-
-- Create a directory in your Google Drive of name `Describe`.
+## 1) Getting started
+- Create a directory in your Google Drive with name --- `Describe`.
 - Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describe/dataset` folder in your Google Drive. 
-- Now rename few files in `/dataset` folder to following filenames:-<br>
+- Now rename few files in `./dataset` folder to following filenames:-<br>
   - Flickr8k.token.txt to `captions.txt`. <br> 
   - Flickr_8k.trainImages.txt to `TrainImagesName.txt`. <br>
   - Flickr_8k.devImages.txt to `DevImagesName.txt`. <br>
   - Flickr_8k.testImages.txt to `TestImagesName.txt`. <br>
   - Flickr8k_Dataset contains to `All_images`.
-- Copy following Colab script in the `Describe` directory in your Google Drive. Now according to where you created `Describe` directory in your Google Drive, give that location within the following script. 
+    
+## 2) Bring your own image and generate the most suited caption describing it (aka Inference)
+Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image and get your captions!
 
-Colab script for training: https://drive.google.com/file/d/1yYFVjrQAGs9gDLpZAf4dx4QIU93X9Inw/view?usp=sharing .
+## 3) Training and Evaluating on your own dataset and hyperparameters to improve it further
+Check out this easy-to-train and evaluation [Google Colab Notebook](https://drive.google.com/file/d/1yYFVjrQAGs9gDLpZAf4dx4QIU93X9Inw/view?usp=sharing).
 
-- Run each code cell of the above Colab script to train your model and evaluate it based on BLEU score.
-
-## 3) Working of Describer
+## 4) Working of Describer
 
 ### 2.1) While training and evaluation:-
 
