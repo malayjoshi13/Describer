@@ -13,9 +13,9 @@ https://user-images.githubusercontent.com/71775151/120343096-0b3a5080-c316-11eb-
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
 ## 1) Bring your own image and use Describer to generate the most suited caption describing it (aka Inference)
-Check out this easy-to-use (Google Colab Notebook)[https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing]. Upload your image and get your captions
+Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image and get your captions!
 
-## 2) Training and Evaluating Describer on your own dataset and hyperparameters to see what improves it!
+## 2) Training and Evaluating on your own dataset and hyperparameters to improve it further
 
 - Create a directory in your Google Drive of name `Describe`.
 - Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describe/dataset` folder in your Google Drive. 
