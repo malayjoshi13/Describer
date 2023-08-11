@@ -21,10 +21,10 @@ BLEU-4: 0.095817
   - Flickr8k_Dataset contains to `All_images`.
     
 ## 2) Bring your own image and generate the most suited caption describing it (aka Inference)
-Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image and get your captions!
+Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image, add its path in this notebook and get your captions!
 
 ## 3) Training and Evaluating on your own dataset and hyperparameters to improve it further
-Check out this easy-to-train and evaluation [Google Colab Notebook](https://drive.google.com/file/d/1yYFVjrQAGs9gDLpZAf4dx4QIU93X9Inw/view?usp=sharing).
+Check out this easy-to-train and evaluation [Google Colab Notebook](https://drive.google.com/file/d/1yYFVjrQAGs9gDLpZAf4dx4QIU93X9Inw/view?usp=sharing). Run each code block of this script to train and evaluate on default hyperparameter settings and the Flickr8K dataset. Otherwise, you can also choose your own dataset and value of hyperparameter in the script.
 
 ## 4) Working of Describer
 
