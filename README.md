@@ -10,8 +10,14 @@ BLEU-4: 0.095817
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
-## 1) Getting started
+## 1) Getting started 
+
+### 1.1) For inference
 - Create a directory in your Google Drive with name --- `Describer`.
+- In this directory, create a shortcut of the `pre_trained_model` folder from following [link](https://drive.google.com/drive/folders/1Ve9oPapUVvnLTVH2z96ubXPSswyuU3-C?usp=sharing). This folder has needed files and pre-trained model, which you will need during inference for generating captions for your images.
+  
+### 1.2) For training
+- Create a directory in your Google Drive with name --- `Describer` (or if you have already created one during inference, then skip this step and move down to the next one).
 - Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describer/dataset` folder in your Google Drive. 
 - Now rename few files in `./dataset` folder to following filenames:-<br>
   - Flickr8k.token.txt to `captions.txt`. <br> 
@@ -19,8 +25,6 @@ BLEU-4: 0.095817
   - Flickr_8k.devImages.txt to `DevImagesName.txt`. <br>
   - Flickr_8k.testImages.txt to `TestImagesName.txt`. <br>
   - Flickr8k_Dataset contains to `All_images`.
-
-- In this directory `Describer`, create a shortcut of the `pre_trained_model` folder from following [link](https://drive.google.com/drive/folders/1Ve9oPapUVvnLTVH2z96ubXPSswyuU3-C?usp=sharing). This folder has needed files and pre-trained model, which you will need during inference for generating captions for your images.
     
 ## 2) Bring your own image and generate the most suited caption describing it (aka Inference)
 Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image, add its path in this notebook and get your captions!
