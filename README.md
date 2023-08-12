@@ -12,9 +12,9 @@ BLEU-4: 0.095817
 
 ## 1) Getting started 
 
-### 1.1) Setting up for inference
+### 1.1) Setting up for evaluation and inference
 - Create a directory in your Google Drive with name --- `Describer`.
-- In this directory, create a shortcut of the `pre_trained_model` folder from following [link](https://drive.google.com/drive/folders/1Ve9oPapUVvnLTVH2z96ubXPSswyuU3-C?usp=sharing). This folder has needed files and pre-trained model, which you will need during inference for generating captions for your images.
+- In this directory, create a shortcut of the `pre_trained_model` folder from following [link](https://drive.google.com/drive/folders/1Ve9oPapUVvnLTVH2z96ubXPSswyuU3-C?usp=sharing). This folder has needed files and pre-trained model weights, which you will need during inference for generating captions for your images as well as to evaluate the trained model.
   
 ### 1.2) Setting up for training
 - Create a directory in your Google Drive with name --- `Describer` (or if you have already created one during inference, then skip this step and move down to the next one).
@@ -29,5 +29,8 @@ BLEU-4: 0.095817
 ## 2) Bring your own image and generate the most suited caption describing it (aka Inference)
 Check out this easy-to-use [Google Colab Notebook](https://colab.research.google.com/drive/1HIpLysJeD401qB8bayn7sKXehEQUzl8L?usp=sharing). Upload your image, add its path in this notebook and get your captions!
 
-## 3) Training and Evaluating on your own dataset and hyperparameters to improve it further
-Check out this easy-to-train and evaluation [Google Colab Notebook](https://colab.research.google.com/drive/1VFN5e6TmuM_tUYDKM4xdGdhsbb6lOAW1?usp=sharing). Run each code block of this script to train and evaluate on default hyperparameter settings and the Flickr8K dataset. Otherwise, you can also choose your own dataset and value of hyperparameter in the script.
+## 3) Training on your own dataset and hyperparameters to improve it further
+Check out this easy-to-train and evaluation [Google Colab Notebook](https://colab.research.google.com/drive/1uE59v-rfCzwTqnG2T7kGYPAdYLEwGiqM?usp=sharing). Run each code block of this script to train on default hyperparameter settings and the Flickr8K dataset. Otherwise, you can also choose your own dataset and value of hyperparameters within this script.
+
+## 4) Evaluating default trained weights or your own trained weights
+Check out this easy-to-evaluate [Google Colab Notebook](https://colab.research.google.com/drive/1qm6776oQAgWK-pjFvhw3HB4uBPxUEaNA?usp=sharing). Run each code block of this script to evaluate default trained weights. Otherwise, you can also evaluate model weights trained by yourself.
