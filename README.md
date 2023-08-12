@@ -12,11 +12,11 @@ BLEU-4: 0.095817
 
 ## 1) Getting started 
 
-### 1.1) For inference
+### 1.1) Setting up for inference
 - Create a directory in your Google Drive with name --- `Describer`.
 - In this directory, create a shortcut of the `pre_trained_model` folder from following [link](https://drive.google.com/drive/folders/1Ve9oPapUVvnLTVH2z96ubXPSswyuU3-C?usp=sharing). This folder has needed files and pre-trained model, which you will need during inference for generating captions for your images.
   
-### 1.2) For training
+### 1.2) Setting up for training
 - Create a directory in your Google Drive with name --- `Describer` (or if you have already created one during inference, then skip this step and move down to the next one).
 - Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describer/dataset` folder in your Google Drive. 
 - Now rename few files in `./dataset` folder to following filenames:-<br>
