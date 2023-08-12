@@ -1,6 +1,6 @@
 # Describer
 
-Describer is an **image captioning system** comprising of ***InceptionV3 model*** (CNN) and ***long short term memory model aka LSTM*** (RNN) fine-tuned on ***Flickr8k data***, which generates textual captions describing the images feed to it.
+Describer is an **image captioning system** which generates textual captions describing the images fed to it. It uses the InceptionV3 model to generate image embeddings and GloVe-6 Billion-200 dim model to generate textual-captions embeddings. These two embeddings then go to the scratch-made CNN model and long short-term memory model aka LSTM model (RNN). It is fine-tuned on ***Flickr8k data***
 
 Got the following BLEU scores during model evaluation:<br>
 
