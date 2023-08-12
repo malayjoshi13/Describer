@@ -3,10 +3,11 @@
 Describer is an **image captioning system** comprising of ***InceptionV3 model*** (CNN) and ***long short term memory model aka LSTM*** (RNN) fine-tuned on ***Flickr8k data***, which generates textual captions describing the images feed to it.
 
 Got the following BLEU scores during model evaluation:<br>
-BLEU-1: 0.475314,<br>
-BLEU-2: 0.288632,<br>
-BLEU-3: 0.202204,<br>
-BLEU-4: 0.095817
+
+BLEU-1: 0.468255,<br>
+BLEU-2: 0.289801,<br>
+BLEU-3: 0.207424,<br>
+BLEU-4: 0.102605
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
 
