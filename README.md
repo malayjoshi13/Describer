@@ -16,7 +16,8 @@ Check out this easy-to-use script [inference.ipynb](https://github.com/malayjosh
 
 ## 2) Re-training on your own dataset and hyperparameters to improve it further
 Check out this easy-to-train script [training.ipynb](https://github.com/malayjoshi13/Describer/blob/main/scripts/training.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/Describer/blob/main/scripts/training.ipynb). Run each code block of this script to train on default hyperparameter settings and the Flickr8K dataset. Otherwise, you can also choose your own dataset and value of hyperparameters within this script.
-<br>
+
+<br><br>
 
 To re-train again on the Flick8K dataset with your own set of hyperparameter values, then:
 - Create a directory in your Google Drive with the name `Describer` (skip this step if you have already cloned this Github repo in your Google Drive during the inference/default training/evaluating process).
