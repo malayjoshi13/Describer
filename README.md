@@ -2,12 +2,12 @@
 
 Describer is an **image captioning system** which generates textual captions describing the images fed to it. It uses the InceptionV3 model to generate image embeddings and GloVe-6 Billion-200 dim model to generate textual-captions embeddings. These two embeddings then go to the scratch-made CNN model and long short-term memory model aka LSTM model (RNN). It is fine-tuned on ***Flickr8k data***
 
-Got the following BLEU scores during model evaluation:<br>
+Got the following BLEU scores during model evaluation, via Greedy Search approach:<br>
 
-BLEU-1: 0.468255,<br>
-BLEU-2: 0.289801,<br>
-BLEU-3: 0.207424,<br>
-BLEU-4: 0.102605
+BLEU-1: 0.795413<br>
+BLEU-2: 0.666974<br>
+BLEU-3: 0.581795<br>
+BLEU-4: 0.399388
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
  
@@ -30,4 +30,4 @@ To re-train again on the Flick8K dataset with your own set of hyperparameter val
   - Flickr8k_Dataset contains to `All_images`.
 
 ## 3) Evaluating default trained weights or your own trained weights
-Check out this easy-to-evaluate script [evaluating.ipynb](https://github.com/malayjoshi13/Describer/blob/main/scripts/evaluating.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/Describer/blob/main/scripts/evaluating.ipynb). Using this you can either evaluate default trained model or model re-trained by you.
+Check out this easy-to-evaluate script [evaluating.ipynb](https://github.com/malayjoshi13/Describer/blob/main/scripts/evaluating.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/Describer/blob/main/scripts/evaluating.ipynb). Using this you can either evaluate default trained model or model re-trained by you. In both case you must have `./dataset` folder within your working directory (if evaluating on Flickr8K, follow above steps).
