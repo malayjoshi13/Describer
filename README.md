@@ -16,10 +16,11 @@ Check out this easy-to-use script [inference.ipynb](https://github.com/malayjosh
 
 ## 2) Re-training on your own dataset and hyperparameters to improve it further
 Check out this easy-to-train script [training.ipynb](https://github.com/malayjoshi13/Describer/blob/main/scripts/training.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/Describer/blob/main/scripts/training.ipynb). Run each code block of this script to train on default hyperparameter settings and the Flickr8K dataset. Otherwise, you can also choose your own dataset and value of hyperparameters within this script.
+<br>
 
-To re-train again on the Flick8K dataset with experimented hyperparameters, then:
-- Create a directory in your Google Drive with the name --- `Describer` (or if you have already created one during inference, then skip this step and move down to the next one).
-- Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside `Describer/dataset` folder in your Google Drive. 
+To re-train again on the Flick8K dataset with your own set of hyperparameter values, then:
+- Create a directory in your Google Drive with the name `Describer` (skip this step if you have already cloned this Github repo in your Google Drive during the inference/default training/evaluating process).
+- Request the Flickr8k dataset from this link https://illinois.edu/fb/sec/1713398. Download and place it inside the `Describer/dataset` folder in your Google Drive. 
 - Now rename few files in `./dataset` folder to following filenames:-<br>
   - Flickr8k.token.txt to `captions.txt`. <br> 
   - Flickr_8k.trainImages.txt to `TrainImagesName.txt`. <br>
