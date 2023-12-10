@@ -28,4 +28,4 @@ To re-train again on the Flick8K dataset with experimented hyperparameters, then
   - Flickr8k_Dataset contains to `All_images`.
 
 ## 3) Evaluating default trained weights or your own trained weights
-Check out this easy-to-evaluate [training.ipynb](https://github.com/malayjoshi13/TalkingHand/blob/main/scripts/training.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/TalkingHand/blob/main/scripts/training.ipynb). Run each code block of this script to evaluate default trained weights. Otherwise, you can also evaluate model weights trained by yourself.
+Check out this easy-to-evaluate [evaluating.ipynb](https://github.com/malayjoshi13/Describer/blob/main/evaluating.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/Describer/blob/main/evaluating.ipynb). Run each code block of this script to evaluate default trained weights. Otherwise, you can also evaluate model weights trained by yourself.
