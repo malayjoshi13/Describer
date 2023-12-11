@@ -29,7 +29,7 @@ To re-train again on the Flick8K dataset with your own set of hyperparameter val
   - Flickr_8k.testImages.txt to `TestImagesName.txt`. <br>
   - Flickr8k_Dataset contains to `All_images`.
  
-A quick hack: as the Flickr8K dataset can't be distributed you have to individually get access to it. In my case, I have once got access and downloaded it in my GDrive. After this whenever I need the dataset, I simply copy Gdrive link of `./dataset` folder from my main folder (in GDrive) and then use it in any my other GDrive. account.
+A quick hack: as the Flickr8K dataset can't be distributed you have to individually get access to it. In my case, once got access and downloaded it in my GDrive, then whenever I need the dataset, I simply copy Gdrive link of `./dataset` folder from my main folder (in GDrive) and then use it in any my other GDrive account. To use in other GDrive account, I paste the copied GDrive link to my another account and ```create a copy/shortcut``` of `./dataset` folder in the directory of my cloned GitHub repo. This way I don't need to upload the dataset every time I work in another GDrive account.
 
 ## 3) Evaluating default trained weights or your own trained weights
 Check out this easy-to-evaluate script [evaluating.ipynb](https://github.com/malayjoshi13/Describer/blob/main/scripts/evaluating.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/malayjoshi13/Describer/blob/main/scripts/evaluating.ipynb). Using this you can either evaluate default trained model or model re-trained by you. In both cases, you must have the `./dataset` folder within your working directory (if evaluating on Flickr8K, follow above steps).
