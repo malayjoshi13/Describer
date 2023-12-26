@@ -1,8 +1,8 @@
 # Describer
 
-Describer is an **image captioning system** which generates textual captions describing the images fed to it. The system is trained on It is fine-tuned on ***Flickr8k data***.
+Describer is an **image captioning system** which generates textual captions describing the images fed to it. The system is trained on ***Flickr8k data***.
 
-It uses ***Merge Architecture*** where the pre-trained ***InceptionV3*** convolutional neural network generates image embeddings and the ***GloVe*** (having 6 Billion pairs of words and their corresponding 200 dim representational vectors) initialized Embedding layer generates caption's word embeddings. Then, image embeddings go to a ***dense layer*** which compresses image embeddings into 256 dim and word embeddings go to ***LSTM*** recurrent neural network which outputs 256 dim representation. These two embeddings/representations then get added together and fed to the F***Feed-forward network*** which outputs the next word of the caption. 
+It uses ***Merge Architecture*** where the pre-trained ***InceptionV3*** convolutional neural network generates image embeddings and the ***GloVe*** (having 6 Billion pairs of words and their corresponding 200 dim representational vectors) initialized Embedding layer generates caption's word embeddings. Then, image embeddings go to a ***dense layer*** which compresses image embeddings into 256 dim and word embeddings go to ***LSTM*** recurrent neural network which outputs 256 dim representation. These two embeddings/representations then get added together and fed to the ***Feed-forward network*** which outputs the next word of the caption. 
 
 Got the following BLEU scores during model evaluation, via Greedy Search approach:<br>
 
