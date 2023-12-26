@@ -11,6 +11,12 @@ Got the following BLEU scores during model evaluation, via Greedy Search approac
 | BLEU-3 score | 0.58 |<br>
 | BLEU-4 score | 0.39 |<br>
 
+| | BLEU-1 score | BLEU-2 score | BLEU-3 score | BLEU-4 score |
+| --- | --- | --- | --- | --- |
+| Greedy Search | 0.79 | 0.66 | 0.58 | 0.39 |
+
+The objective of this project is to take the first step towards developing a solution to help visually impaired people understand visual information around them.
+
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
  
 ## Get your image captioned!! (aka Inference)
