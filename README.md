@@ -6,10 +6,10 @@ It uses ***Merge Architecture*** where the pre-trained ***InceptionV3*** convolu
 
 Got the following BLEU scores during model evaluation, via Greedy Search approach:<br>
 
-| BLEU-1 score | 0.79 |
-| BLEU-2 score | 0.66 |
-| BLEU-3 score | 0.58 |
-| BLEU-4 score | 0.39 |
+| BLEU-1 score | 0.79 |<br>
+| BLEU-2 score | 0.66 |<br>
+| BLEU-3 score | 0.58 |<br>
+| BLEU-4 score | 0.39 |<br>
 
 ![image](https://user-images.githubusercontent.com/71775151/192083201-035fc4c6-f1eb-42b0-ab68-1bc7942ad90a.png)
  
@@ -44,4 +44,4 @@ You are welcome to contribute to the repository with your PRs. In case of query 
 
 ## Licence
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/malayjoshi13/Understanding-Transformer/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/malayjoshi13/Describer/blob/main/LICENSE)
