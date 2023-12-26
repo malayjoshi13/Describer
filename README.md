@@ -4,12 +4,7 @@ Describer is an **image captioning system** which generates textual captions des
 
 It uses ***Merge Architecture*** where the pre-trained ***InceptionV3*** convolutional neural network generates image embeddings and the ***GloVe*** (having 6 Billion pairs of words and their corresponding 200 dim representational vectors) initialized Embedding layer generates caption's word embeddings. Then, image embeddings go to a ***dense layer*** which compresses image embeddings into 256 dim and word embeddings go to ***LSTM*** recurrent neural network which outputs 256 dim representation. These two embeddings/representations then get added together and fed to the ***Feed-forward network*** which outputs the next word of the caption. 
 
-Got the following BLEU scores during model evaluation, via Greedy Search approach:<br>
-
-| BLEU-1 score | 0.79 |<br>
-| BLEU-2 score | 0.66 |<br>
-| BLEU-3 score | 0.58 |<br>
-| BLEU-4 score | 0.39 |<br>
+Got the following BLEU scores during model evaluation:<br>
 
 | | BLEU-1 score | BLEU-2 score | BLEU-3 score | BLEU-4 score |
 | --- | --- | --- | --- | --- |
